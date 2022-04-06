@@ -1,8 +1,8 @@
-import 'portofolio.scss'
+import './portofolio.scss'
 
 const Portofolio = () => {
   return (
-    <div>Portofolio</div>
+    <div className='portofolio'>Portofolio</div>
   )
 }
 

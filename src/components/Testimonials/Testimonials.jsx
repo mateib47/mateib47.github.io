@@ -1,8 +1,8 @@
-import 'testimonials.scss'
+import './testimonials.scss'
 
 const Testimonials = () => {
   return (
-    <div>Testimonials</div>
+    <div className='testimonials'>Testimonials</div>
   )
 }
 
