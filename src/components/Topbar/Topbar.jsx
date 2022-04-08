@@ -1,9 +1,9 @@
 import "./topbar.scss";
 import {Person, Mail} from '@material-ui/icons'
 
-const Topbar = () => {
+const Topbar = ({open, setOpen}) => {
   return (
-    <div className="topbar">
+    <div className={"topbar " + (open && "active")}>
       <div className="wrapper">
         <div className="left">
           <a href="#intro" className="logo">matei.</a>
@@ -16,7 +16,13 @@ const Topbar = () => {
             <span>matei@bucur.com</span>
           </div>
         </div>
-        <div className="right"></div>
+        <div className="right">
+          <div className="hamburger" onClick={() => setOpen(!open)}>
+            <span className="line1"></span>
+            <span className="line2"></span>
+            <span className="line3"></span>
+          </div>  
+        </div>
       </div>
     </div>
   );

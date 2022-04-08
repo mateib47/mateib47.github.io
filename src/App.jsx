@@ -1,12 +1,14 @@
 import React from 'react'
 import {Intro, Topbar, Works, Portofolio, Testimonials, Contact} from './components';
 import './app.scss'
+import { useState } from 'react';
 
 
 const App = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className='app'>
-      <Topbar/>
+      <Topbar open={menuOpen} setOpen={setMenuOpen} />
       <div className="sections">
         <Intro />
         <Portofolio />
