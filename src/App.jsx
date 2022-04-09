@@ -1,5 +1,5 @@
 import React from 'react'
-import {Intro, Topbar, Works, Portofolio, Testimonials, Contact} from './components';
+import {Intro, Topbar, Works, Portofolio, Testimonials, Contact, Menu} from './components';
 import './app.scss'
 import { useState } from 'react';
 
@@ -9,6 +9,7 @@ const App = () => {
   return (
     <div className='app'>
       <Topbar open={menuOpen} setOpen={setMenuOpen} />
+      <Menu  open={menuOpen} setOpen={setMenuOpen} />
       <div className="sections">
         <Intro />
         <Portofolio />
