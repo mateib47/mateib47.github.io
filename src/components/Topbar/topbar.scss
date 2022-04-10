@@ -24,8 +24,8 @@
                 font-size: 40px;
                 font-weight: 700;
                 text-decoration: none;
-                color: inherit;
                 margin-right: 40px;
+                color: inherit;
             }
             .itemContainer{
                 display: flex;
@@ -43,11 +43,14 @@
             }
         }
         .right{
-            
+            height: auto;
+
             .hamburger{
+                overflow: hidden;
                 width: 32px;
                 height: 25px;
                 display: flex;
+                padding: 0;
                 flex-direction: column;
                 justify-content: space-between;
                 cursor: pointer;

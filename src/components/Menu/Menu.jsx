@@ -1,25 +1,17 @@
 import React from 'react';
 import "./menu.scss";
 
+const items = ['Home', 'Portofolio', 'Works', 'Testimonials', 'Contact'];
+const elems = [];
+
 const Menu = ({open, setOpen}) => {
   return (
     <div className={"menu " + (open && "active")}>
         <ul>
-            <li>
-                <a href="#intro">Home</a>
-            </li>
-            <li>
-                <a href="#portofolio">Portofolio</a>
-            </li>
-            <li>
-                <a href="#works">Works</a>
-            </li>
-            <li>
-                <a href="#testimonials">Testimonials</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
+            {
+            items.map((a) => <li key={items.indexOf(a)} onClick={() => setOpen(false)}>
+                <a href={"#" + a.charAt(0).toLowerCase() + a.slice(1)}>{a}</a>
+            </li>)}
         </ul>
     </div>
   )
