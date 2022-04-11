@@ -21,11 +21,11 @@
             align-items: center;
 
             .logo{
+                color:$mainColor;
                 font-size: 40px;
                 font-weight: 700;
                 text-decoration: none;
                 margin-right: 40px;
-                color: inherit;
             }
             .itemContainer{
                 display: flex;
@@ -69,6 +69,10 @@
     &.active{
         background-color: $mainColor;
         color: white;
+    
+        .logo{
+            color:white !important;
+        }
 
         .hamburger{
             span{

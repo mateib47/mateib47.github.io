@@ -6,7 +6,7 @@ const Topbar = ({open, setOpen}) => {
     <div className={"topbar " + (open && "active")}>
       <div className="wrapper">
         <div className="left">
-          <a href="#intro" className="logo">matei.</a>
+          <a href="#home" className="logo">matei.</a>
           <div className="itemContainer">
             <Person className="icon"/>
             <span>+40 722 222 251</span>
