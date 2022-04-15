@@ -1,3 +1,29 @@
-.works{
-    background-color: lightslategray;
+.works {
+  background-color: darkcyan;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .arrow{
+      position: absolute;
+      height: 50px;
+        cursor: pointer;
+
+      &.left{
+        left: 100px;
+        transform: rotateY(180deg);
+      }
+      &.right{
+        right: 100px;
+        cursor: pointer;
+      }
+  }
+
+  .slider {
+    height: 350px;
+    display: flex;
+    position: absolute;
+    left: -100vw;
+  }
 }

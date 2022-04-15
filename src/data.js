@@ -52,4 +52,29 @@ export const sectionsList = [
       id:"2",
       title:"Featured3"
     },
-  ]
+  ];
+
+  export const worksList = [
+    {
+      id:1,
+      icon:"./assets/globe.png",
+      title:"Title",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repellat eos similique inventore quod est id odit, saepe impedit, dignissimos dolore architecto!",
+      img:"http://mateibucur.me/images/documentation-page.png"
+    },
+    {
+      id:2,
+      icon:"./assets/mobile.png",
+      title:"Title1",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repellat eos similique inventore quod est id odit, saepe impedit, dignissimos dolore architecto!",
+      img:"http://mateibucur.me/images/tribute-page.png"
+    },
+    {
+      id:3,
+      icon:"./assets/writing.png",
+      title:"Title2",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repellat eos similique inventore quod est id odit, saepe impedit, dignissimos dolore architecto!",
+      img:"http://mateibucur.me/images/survey.png"
+    }
+
+  ];
