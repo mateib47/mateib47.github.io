@@ -78,3 +78,25 @@ export const sectionsList = [
     }
 
   ];
+
+  export const testimonialsList = [
+    {
+      id:1,
+      name:"Gil Bates",
+      title:"CEO",
+      img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK9gqFKRn28xKHD1CAbEevdzsLmsv5yQkGnQ&usqp=CAU",
+      icon:"assets/writing.png",
+      desc:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. id reiciendis vero at temporibus accusantium non veniam sequi.",
+      featured:true
+    },
+    {
+      id:1,
+      name:"Melon Husk",
+      title:"CEO",
+      img:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/330px-Elon_Musk_Royal_Society_%28crop2%29.jpg",
+      icon:"assets/globe.png",
+      desc:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. id reiciendis vero at temporibus accusantium non veniam sequi.",
+      featured:false
+    },
+    
+  ]
