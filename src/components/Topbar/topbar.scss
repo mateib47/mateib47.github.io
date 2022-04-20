@@ -33,6 +33,11 @@
                 margin-left: 30px;
                 cursor: pointer;
 
+                @include mobile{
+                    display: none;
+                    // find another way to display them
+                }
+
                 .icon{
                     font-size: 18px;
                     margin-right: 5px;
