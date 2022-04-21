@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .works {
   background-color: darkcyan;
   display: flex;
@@ -9,6 +11,10 @@
       position: absolute;
       height: 50px;
         cursor: pointer;
+
+        @include mobile {
+          display: none;
+        }
 
       &.left{
         left: 100px;
@@ -26,5 +32,11 @@
     position: absolute;
     left: 0;
     transition: all 1s ease-out;
+
+    @include mobile {
+      height: 100v;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 }
