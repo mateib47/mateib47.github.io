@@ -1,5 +1,5 @@
 import React from 'react'
-import {Intro, Topbar, Works, Portofolio, Testimonials, Contact, Menu} from './components';
+import {Intro, Topbar, Works, Portofolio, Testimonials, Contact, Menu, About} from './components';
 import './app.scss'
 import { useState } from 'react';
 
@@ -12,6 +12,7 @@ const App = () => {
       <Menu  open={menuOpen} setOpen={setMenuOpen} />
       <div className="sections">
         <Intro />
+        <About />
         <Portofolio />
         <Works />
         <Testimonials />

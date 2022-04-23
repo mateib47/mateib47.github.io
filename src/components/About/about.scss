@@ -1,0 +1,29 @@
+@import "../../global.scss";
+
+.about{
+    background-color: white;
+    display: flex;
+
+    .container{
+
+        .left{
+            display: flex;
+            justify-content: center;
+            flex: 1;
+
+            .textContainer{
+                width: 450px;
+                text-align: center;
+            }
+        }
+        .right{
+            flex: 1;
+            display: flex;
+
+            img{
+                height: 100%;
+            }
+        }
+    }
+
+}
