@@ -103,7 +103,7 @@ export const about ={description:`My name is Matei Bucur and I am in my first ye
   Technical Computer Science at University of Twente. The numerous
   activities I have done revolving around computer science provided me
   with enough reasons for working in this field of science. I chose to
-  join University of Twente and I am sure this computer science
+  join this university and I am sure this computer science
   programme is going to help me get relevant teaching that will
   develop necessary competencies to become a successful programmer and
   discover what branch of this discipline fits best for me. 
