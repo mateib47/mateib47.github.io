@@ -1,7 +1,7 @@
 import React from 'react';
 import "./menu.scss";
 
-const items = ['Home', 'Portofolio', 'Works', 'Testimonials', 'Contact'];
+const items = ['Home', 'About', 'Portofolio', 'Works', 'Testimonials', 'Contact'];
 const elems = [];
 
 const Menu = ({open, setOpen}) => {

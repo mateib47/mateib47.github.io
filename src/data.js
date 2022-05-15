@@ -120,4 +120,14 @@ export const about ={description:`My name is Matei Bucur and I am in my first ye
   of work because my life’s goal is to have a great positive impact on
   society and the world.`, imgLink:"assets/passions.png", boldedWords:["University of Twente", "Honours", "web-development"]} ;
 
+  export const person = {
+    name: "Matei Bucur",
+    status: "Student",
+    attributes: ["Web Developer","Entrepreneur", "Negotiator"],
+    profileImg: "assets/profile1.png",
+    linkedIn:"",
+    githubLInk: "https://github.com/mateib47",
+    
+  };
+
 

@@ -1,5 +1,7 @@
 import "./topbar.scss";
-import {Person, Mail, LinkedIn, GitHub,Folder} from '@material-ui/icons'
+import {Person, Mail, LinkedIn, GitHub,Folder} from '@material-ui/icons';
+import { person } from "../../data";
+
 
 const Topbar = ({open, setOpen}) => {
   const openInNewTab = (url) => {
@@ -15,25 +17,26 @@ const Topbar = ({open, setOpen}) => {
           <a href="#home" className="logo">matei.</a>
           <div className="itemContainer">
             <Person className="icon"/>
-            <span>+40 722 222 251</span>
+            <span>{person.phone}</span>
           </div>
           <div className="itemContainer" onClick={(e) => {
-                openInNewTab('mailto:bucur.matei@yahoo.com')
+                openInNewTab(`mailto:${person.email}`)
             }}>
             <Mail className="icon"/>
-            <span>matei@bucur.com</span>
+            <span>{person.email}</span>
           </div>
           <div className="itemContainer" onClick={(e) => {
-                openInNewTab('https://www.linkedin.com/in/matei-bucur-57a591207/')
+                openInNewTab(person.linkedIn)
             }}>
             <LinkedIn className="icon"/>
-            <span>matei bucur</span>
+            <span>{person.name}</span>
           </div>
           <div className="itemContainer" onClick={(e) => {
-                openInNewTab('https://github.com/mateib47')
+                openInNewTab(person.github)
             }}>
             <GitHub className="icon"/>
-            <span>mateib47</span>
+            <span>{person.github}</span> 
+  {/* fix */}
           </div>
           <div className="itemContainer">
             <Folder className="icon"/>

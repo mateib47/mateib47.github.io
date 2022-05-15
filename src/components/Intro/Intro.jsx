@@ -1,6 +1,8 @@
 import "./intro.scss";
 import { init } from "ityped";
 import { useEffect, useRef } from "react";
+import { person } from "../../data";
+
 
 const Intro = () => {
   const textRef = useRef();
@@ -8,7 +10,7 @@ const Intro = () => {
   useEffect(() => {
     init(textRef.current, {
       showCursor: false,
-      strings: ["Web Developer","Entrepreneur", "Negotiator"],
+      strings: person.attributes,
       backDelay: 1500,
       backSpeed: 60,
       showCursor: true
@@ -19,19 +21,19 @@ const Intro = () => {
     <div className="intro" id="home">
       <div className="left">
         <div className="imgContainer">
-          <img src="assets/profile1.png" alt="" />
+          <img src={person.profileImg} alt="Profile Picture" />
         </div>
       </div>
       <div className="right">
         <div className="wrapper">
           <h2>Hi There, I'm</h2>
-          <h1>Matei Bucur</h1>
+          <h1>{person.name}</h1>
           <h3>
-            Student <span ref={textRef}></span>
+            {person.status} <span ref={textRef}></span>
           </h3>
         </div>
-        <a href="#portofolio">
-          <img src="assets/down.png" alt="" />
+        <a href="#about">
+          <img src="assets/down.png" alt="Down arrow" />
         </a>
       </div>
     </div>
