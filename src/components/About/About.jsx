@@ -1,11 +1,12 @@
 import "./about.scss";
-import { about } from "../../data";
+import { person } from "../../data";
 import { useEffect } from "react";
+import ReactWordcloud from "react-wordcloud";
 
 const About = () => {
   const createDescription = () => {
-    let s = about.description;
-    let w = about.boldedWords;
+    let s = person.description;
+    let w = person.boldedWords;
     for (let i = 0; i < w.length; i++) {
       let word = w[i];
       let regex = new RegExp(w[i], "g");
@@ -13,6 +14,12 @@ const About = () => {
     }
     return s;
   };
+
+  const options = {
+    rotations: 2,
+    rotationAngles: [-90, 0],
+  };
+  const size = [900, 400];
 
   return (
     <div className="about" id="about">
@@ -25,7 +32,11 @@ const About = () => {
           />
         </div>
         <div className="right">
-          <img src={about.imgLink} alt="" />
+          <ReactWordcloud
+            words={person.wordCloud}
+            options={options}
+            size={size}
+          />
         </div>
       </div>
     </div>

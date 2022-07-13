@@ -99,7 +99,49 @@ export const testimonialsList = [
   },
 ];
 
-export const about ={description:`My name is Matei Bucur and I am in my first year of studying
+
+export const person = {
+  name: "Matei Bucur",
+  status: "Student",
+  attributes: ["Web Developer", "Entrepreneur", "Negotiator"],
+  profileImg: "assets/profile1.png",
+  linkedIn: "",
+  githubLink: "https://github.com/mateib47",
+  wordCloud: [
+    {
+      text: "Negotiation",
+      value: 64,
+    },
+    {
+      text: "Honours",
+      value: 31,
+    },
+    {
+      text: "Climbing",
+      value: 46,
+    },
+    {
+      text: "Running",
+      value: 37,
+    },
+    {
+      text: "Programming",
+      value: 50,
+    },
+    {
+      text: "Cycling",
+      value: 14,
+    },
+    {
+      text: "Public Speaking",
+      value: 29,
+    },
+    {
+      text: "Self-development",
+      value: 79,
+    },
+  ],
+  description: `My name is Matei Bucur and I am in my first year of studying
   Technical Computer Science at University of Twente. The numerous
   activities I have done revolving around computer science provided me
   with enough reasons for working in this field of science. I chose to
@@ -118,16 +160,7 @@ export const about ={description:`My name is Matei Bucur and I am in my first ye
   improving my web-development knowledge. Finally, my aim is to become
   a high-performance person that is capable of handling large amounts
   of work because my life’s goal is to have a great positive impact on
-  society and the world.`, imgLink:"assets/passions.png", boldedWords:["University of Twente", "Honours", "web-development"]} ;
-
-  export const person = {
-    name: "Matei Bucur",
-    status: "Student",
-    attributes: ["Web Developer","Entrepreneur", "Negotiator"],
-    profileImg: "assets/profile1.png",
-    linkedIn:"",
-    githubLInk: "https://github.com/mateib47",
-    
-  };
-
-
+  society and the world.`,
+  imgLink: "assets/passions.png",
+  boldedWords: ["University of Twente", "Honours", "web-development"],
+};
