@@ -1,7 +1,8 @@
 import React from 'react'
-import {Intro, Topbar, Works, Portofolio, Testimonials, Contact, Menu, About} from './components';
+import {Intro, Topbar, Works, Portofolio, Testimonials, Contact, Menu, About, Network} from './components';
 import './app.scss'
 import { useState } from 'react';
+
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <Works />
         <Testimonials />
         <Contact />
+        <Network />
       </div>
     </div>
   )

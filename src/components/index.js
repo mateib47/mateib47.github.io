@@ -6,6 +6,8 @@ export {default as Testimonials} from './Testimonials/Testimonials';
 export {default as Works} from './Works/Works';
 export {default as Menu} from './Menu/Menu';
 export {default as About} from './About/About';
+export {default as Network} from './Network/Network';
+
 
 
 
