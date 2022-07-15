@@ -104,7 +104,6 @@ export const person = {
   name: "Matei Bucur",
   status: "Student",
   attributes: ["Web Developer", "Entrepreneur", "Negotiator"],
-  profileImg: "assets/profile1.png",
   linkedIn: "",
   githubLink: "https://github.com/mateib47",
   wordCloud: [
@@ -161,6 +160,5 @@ export const person = {
   a high-performance person that is capable of handling large amounts
   of work because my life’s goal is to have a great positive impact on
   society and the world.`,
-  imgLink: "assets/passions.png",
   boldedWords: ["University of Twente", "Honours", "web-development"],
 };

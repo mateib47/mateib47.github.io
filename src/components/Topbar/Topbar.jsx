@@ -15,32 +15,20 @@ const Topbar = ({open, setOpen}) => {
       <div className="wrapper">
         <div className="left">
           <a href="#home" className="logo">matei.</a>
-          <div className="itemContainer">
-            <Person className="icon"/>
-            <span>{person.phone}</span>
-          </div>
           <div className="itemContainer" onClick={(e) => {
                 openInNewTab(`mailto:${person.email}`)
             }}>
             <Mail className="icon"/>
-            <span>{person.email}</span>
           </div>
           <div className="itemContainer" onClick={(e) => {
                 openInNewTab(person.linkedIn)
             }}>
             <LinkedIn className="icon"/>
-            <span>{person.name}</span>
           </div>
           <div className="itemContainer" onClick={(e) => {
                 openInNewTab(person.github)
             }}>
             <GitHub className="icon"/>
-            <span>{person.github}</span> 
-  {/* fix */}
-          </div>
-          <div className="itemContainer">
-            <Folder className="icon"/>
-            <span>cv</span>
           </div>
         </div>
         <div className="right">

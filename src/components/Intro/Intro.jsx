@@ -21,7 +21,7 @@ const Intro = () => {
     <div className="intro" id="home">
       <div className="left">
         <div className="imgContainer">
-          <img src={person.profileImg} alt="Profile Picture" />
+          <img src="assets/profile1.png" alt="Profile Picture" />
         </div>
       </div>
       <div className="right">
