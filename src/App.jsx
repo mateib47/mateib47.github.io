@@ -1,5 +1,5 @@
 import React from 'react'
-import {Intro, Topbar, Works, Portofolio, Testimonials, Contact, Menu, About, Network} from './components';
+import {Intro, Topbar, Works, Portofolio, Testimonials, Contact, Menu, About, Network, Sidebar} from './components';
 import './app.scss'
 import { useState } from 'react';
 
@@ -18,7 +18,7 @@ const App = () => {
         <Works />
         <Testimonials />
         <Contact />
-        <Network />
+        <Sidebar />
       </div>
     </div>
   )

@@ -10,6 +10,8 @@
         scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
         scrollbar-width: none;
+        margin: 0 70px;
+
         &::-webkit-scrollbar{
             display: none;
         }

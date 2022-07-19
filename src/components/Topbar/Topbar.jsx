@@ -15,21 +15,6 @@ const Topbar = ({open, setOpen}) => {
       <div className="wrapper">
         <div className="left">
           <a href="#home" className="logo">matei.</a>
-          <div className="itemContainer" onClick={(e) => {
-                openInNewTab(`mailto:${person.email}`)
-            }}>
-            <Mail className="icon"/>
-          </div>
-          <div className="itemContainer" onClick={(e) => {
-                openInNewTab(person.linkedIn)
-            }}>
-            <LinkedIn className="icon"/>
-          </div>
-          <div className="itemContainer" onClick={(e) => {
-                openInNewTab(person.github)
-            }}>
-            <GitHub className="icon"/>
-          </div>
         </div>
         <div className="right">
           <div className="hamburger" onClick={() => setOpen(!open)}>
