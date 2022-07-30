@@ -1,3 +1,24 @@
+export async function fetchSectionList(setSections) {
+  try {
+    const result = await fetch(process.env.REACT_APP_API + "/portfolio/get");
+    const sections = await result.json();
+    setSections(sections);
+  } catch (error) {
+   // console.error(error);
+  }
+}
+
+export async function fetchProjectsBySection(section, setData, setLoading) {
+  try {
+    const result = await fetch(process.env.REACT_APP_API + "/portfolio/get?section=" + section);
+    const projects = await result.json();
+    setData(projects);
+    setLoading(false);
+  } catch (error) {
+   // console.error(error);
+  }
+}
+
 export const projectsList = [
   {
     id: 0,
@@ -39,20 +60,7 @@ export const projectsList = [
   },
 ];
 
-export const sectionsList = [
-  {
-    id: "0",
-    title: "Featured",
-  },
-  {
-    id: "1",
-    title: "Featured2",
-  },
-  {
-    id: "2",
-    title: "Featured3",
-  },
-];
+export const sectionsList = ["Featured", "Featured2", "Featured3"];
 
 export const worksList = [
   {
@@ -98,7 +106,6 @@ export const testimonialsList = [
     featured: false,
   },
 ];
-
 
 export const person = {
   name: "Matei Bucur",

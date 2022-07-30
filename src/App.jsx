@@ -10,6 +10,7 @@ const App = () => {
   return (
     <div className='app'>
       <Topbar open={menuOpen} setOpen={setMenuOpen} />
+      <Sidebar />
       <Menu  open={menuOpen} setOpen={setMenuOpen} />
       <div className="sections">
         <Intro />
@@ -18,7 +19,6 @@ const App = () => {
         <Works />
         <Testimonials />
         <Contact />
-        <Sidebar />
       </div>
     </div>
   )

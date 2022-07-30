@@ -6,21 +6,21 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-const Project = ({ key, img, title }) => {
+const Project = ({ key, img, title, description }) => {
   return (
-    <Card sx={{ maxWidth: 345 }} className="">
-      <CardMedia
+    <Card sx={{ maxWidth: 245, maxHeight: 354, margin: 1 }} className="">
+      {img ? <CardMedia
         component="img"
         alt="Project image"
         height="140"
         image={img}
-      />
+      /> : <></>}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, praesentium quia! Est cumque at sint veniam, nostrum ad accusamus? Neque consequuntur molestiae maxime at. Deleniti vitae quod aspernatur nostrum iure.
+          {description ? description : ""}
         </Typography>
       </CardContent>
       <CardActions>

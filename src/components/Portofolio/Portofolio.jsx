@@ -2,36 +2,49 @@ import "./portofolio.scss";
 import PortfolioList from "./PortofolioList/PortfolioList";
 import Project from "./Project/Project";
 import { useState } from "react";
-import { projectsList, sectionsList } from "../../data";
+import { projectsList, sectionsList, fetchSectionList, fetchProjectsBySection } from "../../data";
 import { useEffect } from "react";
+import { useRef } from "react";
 
 const Portofolio = () => {
-  const [selected, setSelected] = useState("0");
+  const [selected, setSelected] = useState("");
   const [data, setData] = useState([]);
-  const list = sectionsList;
+  const [sections, setSections] = useState([]);
+  const [loading, setLoading] = useState(false)
+  
+  //const projectListElem = useRef();    
 
+  //const list = fetchSectionList(setSections);
   useEffect(() => {
-    setData(projectsList.find((elem) => elem.id == selected).items);
+    fetchSectionList(setSections);
+    if(sections) setSelected(sections[0])
+   },[])
+  
+  useEffect(() => {
+    fetchProjectsBySection(selected, setData, setLoading);
   }, [selected]);
+
+//todo on section change, old projects are renderedagain for a short time
 
   return (
     <div className="portofolio" id="portofolio">
       <h1>Portofolio</h1>
       <ul>
-        {list.map((item) => (
+        {sections ? sections.map(item => (
           <PortfolioList
-            title={item.title}
-            id={item.id}
-            active={selected === item.id}
+            title={item}
+            id={item}
+            active={selected === item}
             setSelected={setSelected}
-            key={item.id}
+            key={item}
+            setLoading={setLoading}
           />
-        ))}
+        )) : <h1>Loading...</h1>}
       </ul>
-      <div className="container">
-        {data.map((x) => (
-          <Project key={x.id} img={x.img} title={x.title} />
-        ))}
+      <div className="container" >
+        {!loading ? data.map((x) => (
+          <Project key={x.id} img={x.img} title={x.name} description={x.description} />
+        )) : <h1>Loading...</h1>}
       </div>
     </div>
   );
