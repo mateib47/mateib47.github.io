@@ -28,7 +28,7 @@ const Portofolio = () => {
 
   return (
     <div className="portofolio" id="portofolio">
-      <h1>Portofolio</h1>
+      <h1>Portofolio</h1>      
       <ul>
         {sections ? sections.map(item => (
           <PortfolioList
@@ -44,7 +44,7 @@ const Portofolio = () => {
       <div className="container" >
         {!loading ? data.map((x) => (
           <Project key={x.id} img={x.img} title={x.name} description={x.description} />
-        )) : <h1>Loading...</h1>}
+        )) : <div className="containerWhirl"><div className="sliding-tiles"><div></div></div></div> }
       </div>
     </div>
   );
