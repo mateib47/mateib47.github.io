@@ -5,6 +5,9 @@ import { useState } from "react";
 import { projectsList, sectionsList, fetchSectionList, fetchProjectsBySection } from "../../data";
 import { useEffect } from "react";
 import { useRef } from "react";
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
+import Progress from "../Progress/Progress";
 
 const Portofolio = () => {
   const [selected, setSelected] = useState("");
@@ -44,7 +47,9 @@ const Portofolio = () => {
       <div className="container" >
         {!loading ? data.map((x) => (
           <Project key={x.id} img={x.img} title={x.name} description={x.description} />
-        )) : <div className="containerWhirl"><div className="sliding-tiles"><div></div></div></div> }
+        )) : <div className="progressContainer">
+        <Progress />
+      </div> }
       </div>
     </div>
   );
