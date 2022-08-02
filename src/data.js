@@ -1,8 +1,10 @@
-export async function fetchSectionList(setSections) {
+export async function fetchSectionList(setSections, setLoading, setSelected) {
   try {
     const result = await fetch(process.env.REACT_APP_API + "/portfolio/get");
     const sections = await result.json();
+    setLoading(false);
     setSections(sections);
+    setSelected(sections[0])
   } catch (error) {
    // console.error(error);
   }
