@@ -20,6 +20,7 @@ const Portofolio = () => {
   const [sections, setSections] = useState([]);
   const [loading, setLoading] = useState(false);
   const [sectLoading, setSectLoading] = useState(false);
+  const [projectDisplay, setProjectDisplay] = useState(-1);
 
   //const projectListElem = useRef();
 
@@ -32,6 +33,10 @@ const Portofolio = () => {
   useEffect(() => {
     fetchProjectsBySection(selected, setData, setLoading);
   }, [selected]);
+
+  useEffect(() => {
+    console.log(projectDisplay);
+  }, [projectDisplay]);
 
   //todo on section change, old projects are renderedagain for a short time
 
@@ -51,25 +56,34 @@ const Portofolio = () => {
             />
           ))
         ) : (
-          <>
-          </>
+          <></>
         )}
       </ul>
       <div className="container">
-        {!loading && !sectLoading ? (
-          data.map((x) => (
-            <Project
-              key={x.id}
-              img={x.img}
-              title={x.name}
-              description={x.description}
-            />
-          ))
-        ) : (
-          <div className="progressContainer">
-            <Progress />
+        {projectDisplay >= 0 ? (
+          <div className="left">
+            Info about project with id: {projectDisplay}
           </div>
+        ) : (
+          <></>
         )}
+        <div className="right">
+          {!loading && !sectLoading ? (
+            data.map((x) => (
+              <Project
+                id={x.id}
+                img={x.img}
+                title={x.name}
+                description={x.description}
+                setProjectDisplay={setProjectDisplay}
+              />
+            ))
+          ) : (
+            <div className="progressContainer">
+              <Progress />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
