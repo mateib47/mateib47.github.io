@@ -13,6 +13,7 @@ import { useRef } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import Progress from "../Progress/Progress";
+import ProjectExtended from "./ProjectExtended/ProjectExtended";
 
 const Portofolio = () => {
   const [selected, setSelected] = useState("");
@@ -20,7 +21,7 @@ const Portofolio = () => {
   const [sections, setSections] = useState([]);
   const [loading, setLoading] = useState(false);
   const [sectLoading, setSectLoading] = useState(false);
-  const [projectDisplay, setProjectDisplay] = useState(-1);
+  const [projectDisplay, setProjectDisplay] = useState();
 
   //const projectListElem = useRef();
 
@@ -53,6 +54,7 @@ const Portofolio = () => {
               setSelected={setSelected}
               key={item}
               setLoading={setLoading}
+              setProjectDisplay={setProjectDisplay}
             />
           ))
         ) : (
@@ -60,9 +62,9 @@ const Portofolio = () => {
         )}
       </ul>
       <div className="container">
-        {projectDisplay >= 0 ? (
+        {projectDisplay ? (
           <div className="left">
-            Info about project with id: {projectDisplay}
+            <ProjectExtended project={projectDisplay}/>
           </div>
         ) : (
           <></>
@@ -76,6 +78,7 @@ const Portofolio = () => {
                 title={x.name}
                 description={x.description}
                 setProjectDisplay={setProjectDisplay}
+                projectObj={x}
               />
             ))
           ) : (

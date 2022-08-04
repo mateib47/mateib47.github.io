@@ -5,7 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 
-const Project = ({ id, img, title, description, setProjectDisplay }) => {
+const Project = ({ id, img, title, description, setProjectDisplay, projectObj }) => {
   return (
     <Card
       key={id}
@@ -14,7 +14,7 @@ const Project = ({ id, img, title, description, setProjectDisplay }) => {
     >
       <CardActionArea
         onClick={() => {
-          setProjectDisplay(id);
+          setProjectDisplay(projectObj);
         }}
       >
         {img ? (

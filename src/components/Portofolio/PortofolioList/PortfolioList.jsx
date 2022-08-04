@@ -1,8 +1,9 @@
 import "./portfolioList.scss"
 
-const PortfolioList = ({title, id, active, setSelected, setLoading}) => {
+const PortfolioList = ({title, id, active, setSelected, setLoading, setProjectDisplay}) => {
   const handleClick = () =>{
-    setSelected(id); 
+    setSelected(id);
+    setProjectDisplay(null); 
     setLoading(true);
   }
 
