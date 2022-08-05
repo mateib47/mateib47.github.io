@@ -14,6 +14,8 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import Progress from "../Progress/Progress";
 import ProjectExtended from "./ProjectExtended/ProjectExtended";
+import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
 
 const Portofolio = () => {
   const [selected, setSelected] = useState("");
@@ -64,28 +66,26 @@ const Portofolio = () => {
       <div className="container">
         {projectDisplay ? (
           <div className="left">
-            <ProjectExtended project={projectDisplay}/>
+            <ProjectExtended project={projectDisplay} />
           </div>
         ) : (
           <></>
         )}
         <div className="right">
-          {!loading && !sectLoading ? (
-            data.map((x) => (
-              <Project
-                id={x.id}
-                img={x.img}
-                title={x.name}
-                description={x.description}
-                setProjectDisplay={setProjectDisplay}
-                projectObj={x}
-              />
-            ))
-          ) : (
-            <div className="progressContainer">
-              <Progress />
-            </div>
-          )}
+            {!loading && !sectLoading ? (
+              data.map((x) => (
+                  <Project
+                    id={x.id}
+                    img={x.img}
+                    title={x.name}
+                    description={x.description}
+                    setProjectDisplay={setProjectDisplay}
+                    projectObj={x}
+                  />
+              ))
+            ) : (
+                <Progress />
+            )}
         </div>
       </div>
     </div>
