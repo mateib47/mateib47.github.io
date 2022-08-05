@@ -18,10 +18,11 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Project from "../Project/Project";
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const ProjectExtended = ({project}) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 545, height:'80%', width:'100%' }}>
     <CardHeader
       avatar={
         <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
