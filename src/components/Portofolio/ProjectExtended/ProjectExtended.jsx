@@ -19,8 +19,10 @@ import Project from "../Project/Project";
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import WebIcon from '@mui/icons-material/Web';
+import CloseIcon from '@mui/icons-material/Close';
 
-const ProjectExtended = ({project}) => {
+const ProjectExtended = ({project,setProjectDisplay}) => {
   return (
     <Card sx={{ maxWidth: 545, height:'80%', width:'100%' }}>
     <CardHeader
@@ -29,11 +31,11 @@ const ProjectExtended = ({project}) => {
           {project.name.split(" ").slice(0,2).reduce((a,b)=>a+b[0],"")}
         </Avatar>
       }
-    //   action={
-    //     <IconButton aria-label="settings">
-    //       <MoreVertIcon />
-    //     </IconButton>
-    //   }
+      action={
+        <IconButton aria-label="close" onClick={() => {setProjectDisplay(null)}}>
+          <CloseIcon />
+        </IconButton>
+      }
       title={project.name}
       subheader="July 2022 - August 2022"
       
@@ -58,6 +60,12 @@ const ProjectExtended = ({project}) => {
     <CardActions disableSpacing>
       <IconButton aria-label="add to favorites">
         <StarIcon />
+      </IconButton>
+      <IconButton size="small" target="_blank" href={project.html_url}>
+          <GitHubIcon />
+      </IconButton>
+      <IconButton size="small" target="_blank" href={project.homepage}>
+          <WebIcon />
       </IconButton>
       <IconButton aria-label="share">
         <ShareIcon />

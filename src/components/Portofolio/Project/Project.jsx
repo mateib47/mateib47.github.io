@@ -15,6 +15,8 @@ const Project = ({
   setProjectDisplay,
   projectObj,
 }) => {
+
+  console.log(projectObj)
   return (
     <Card
       key={id}
@@ -41,10 +43,10 @@ const Project = ({
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small">
+        <Button size="small" target="_blank" href={projectObj.html_url}>
           <GitHubIcon />
         </Button>
-        <Button size="small">Live page</Button>
+        <Button size="small" target="_blank" href={projectObj.homepage}>Live page</Button>
       </CardActions>
     </Card>
   );

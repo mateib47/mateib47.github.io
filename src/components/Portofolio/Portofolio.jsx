@@ -66,7 +66,7 @@ const Portofolio = () => {
       <div className="container">
         {projectDisplay ? (
           <div className="left">
-            <ProjectExtended project={projectDisplay} />
+            <ProjectExtended project={projectDisplay} setProjectDisplay={setProjectDisplay} />
           </div>
         ) : (
           <></>
