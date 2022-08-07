@@ -11,6 +11,7 @@ const Sidebar = () => {
 
   return (
     <div className='sidebar'>
+      <div className='line'></div>
       <div
         className="itemContainer"
         onClick={(e) => {

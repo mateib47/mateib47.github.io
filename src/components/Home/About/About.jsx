@@ -1,5 +1,5 @@
 import "./about.scss";
-import { person } from "../../data";
+import { person } from "../../../data";
 import { useEffect } from "react";
 import ReactWordcloud from "react-wordcloud";
 

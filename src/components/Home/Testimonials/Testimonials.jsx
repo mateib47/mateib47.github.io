@@ -1,6 +1,6 @@
 import './testimonials.scss'
 import {
-  testimonialsList} from "../../data";
+  testimonialsList} from "../../../data";
 
 const Testimonials = () => {
   return (

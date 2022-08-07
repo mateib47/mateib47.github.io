@@ -1,7 +1,7 @@
 import "./intro.scss";
 import { init } from "ityped";
 import { useEffect, useRef } from "react";
-import { person } from "../../data";
+import { person } from "../../../data";
 
 
 const Intro = () => {

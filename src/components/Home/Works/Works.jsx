@@ -1,6 +1,6 @@
 import "./works.scss";
 import {
-  worksList} from "../../data";
+  worksList} from "../../../data";
   import WorksSlide from "./WorksSlide/WorksSlide";
   import { useState } from "react";
 
