@@ -1,6 +1,7 @@
 import "./topbar.scss";
 import {Person, Mail, LinkedIn, GitHub,Folder} from '@material-ui/icons';
 import { person } from "../../data";
+import Selector from "./Selector/Selector";
 
 
 const Topbar = ({open, setOpen}) => {
@@ -15,6 +16,9 @@ const Topbar = ({open, setOpen}) => {
       <div className="wrapper">
         <div className="left">
           <a href="#home" className="logo">matei.</a>
+        </div>
+        <div className="center">
+          <Selector />
         </div>
         <div className="right">
           <div className="hamburger" onClick={() => setOpen(!open)}>
