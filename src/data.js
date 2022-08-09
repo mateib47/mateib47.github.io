@@ -21,6 +21,14 @@ export async function fetchProjectsBySection(section, setData, setLoading) {
   }
 }
 
+export const siteModes = [
+  "Home",
+  "Programming",
+  "Negotiation",
+  "Entrepreneurship",
+  "Public speaking",
+];
+
 export const projectsList = [
   {
     id: 0,

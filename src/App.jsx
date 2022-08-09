@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Intro,
   Topbar,
@@ -11,13 +10,21 @@ import {
   Network,
   Sidebar,
   Home,
+  Programming,
 } from "./components";
 import "./app.scss";
 import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useRoutes,
+  Navigate,
+} from "react-router-dom";
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
   //update sections of topbar menu
   return (
     <Router>
@@ -25,19 +32,25 @@ const App = () => {
         <Topbar open={menuOpen} setOpen={setMenuOpen} />
         <Sidebar />
         <Menu open={menuOpen} setOpen={setMenuOpen} />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <div className="sections">
-                <Home />
-              </div>
-            }
-          />
-        </Routes>
+        <div className="sections">
+          <Routes>
+            <Route path="/" element={<Navigate to="/home" />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/programming" element={<Programming />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );
 };
+
+// const Pages = () => {
+//   let routes =   useRoutes([
+//     { path: "/", element: <Home /> },
+//     { path: "/home", element: <Home /> },
+//     { path: "/programming", element: <Programming /> },
+//   ]);
+//   return routes
+// }
 
 export default App;

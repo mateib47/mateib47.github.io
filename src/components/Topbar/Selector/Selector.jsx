@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
@@ -8,24 +9,22 @@ import Paper from "@mui/material/Paper";
 import Popper from "@mui/material/Popper";
 import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
+import { Link } from "react-router-dom";
+import { siteModes } from "../../../data";
 
-const options = [
-  "Programming",
-  "Negotiation",
-  "Entrepreneurship",
-  "Public speaking",
-];
 
 const Selector = () => {
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
 
   const handleClick = () => {
-    console.info(`You clicked ${options[selectedIndex]}`);
+    console.info(`You clicked ${siteModes[selectedIndex]}`);
   };
 
   const handleMenuItemClick = (event, index) => {
+    console.log(siteModes[index]);
     setSelectedIndex(index);
     setOpen(false);
   };
@@ -49,7 +48,7 @@ const Selector = () => {
         ref={anchorRef}
         aria-label="split button"
       >
-        <Button onClick={handleClick}>{options[selectedIndex]}</Button>
+        <Button onClick={handleClick}>{siteModes[selectedIndex]}</Button>
         <Button
           size="small"
           aria-controls={open ? "split-button-menu" : undefined}
@@ -79,13 +78,13 @@ const Selector = () => {
             <Paper>
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList id="split-button-menu" autoFocusItem>
-                  {options.map((option, index) => (
+                  {siteModes.map((option, index) => (
                     <MenuItem
                       key={option}
                       selected={index === selectedIndex}
                       onClick={(event) => handleMenuItemClick(event, index)}
                     >
-                      {option}
+                      <Link to={"/"+option}>{option}</Link>
                     </MenuItem>
                   ))}
                 </MenuList>

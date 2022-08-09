@@ -7,12 +7,12 @@ import {
   sectionsList,
   fetchSectionList,
   fetchProjectsBySection,
-} from "../../data";
+} from "../../../data";
 import { useEffect } from "react";
 import { useRef } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
-import Progress from "../Progress/Progress";
+import Progress from "../../Progress/Progress";
 import ProjectExtended from "./ProjectExtended/ProjectExtended";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
