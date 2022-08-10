@@ -11,13 +11,12 @@ import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
 import { Link } from "react-router-dom";
 import { siteModes } from "../../../data";
-
+import Typography from "@mui/material/Typography";
 
 const Selector = () => {
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
   const [selectedIndex, setSelectedIndex] = useState(0);
-
 
   const handleClick = () => {
     console.info(`You clicked ${siteModes[selectedIndex]}`);
@@ -79,13 +78,15 @@ const Selector = () => {
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList id="split-button-menu" autoFocusItem>
                   {siteModes.map((option, index) => (
-                    <MenuItem
-                      key={option}
-                      selected={index === selectedIndex}
-                      onClick={(event) => handleMenuItemClick(event, index)}
-                    >
-                      <Link to={"/"+option}>{option}</Link>
-                    </MenuItem>
+                    <Link to={"/" + option} style={{ textDecoration: 'none', color:'inherit' }}>
+                      <MenuItem
+                        key={option}
+                        selected={index === selectedIndex}
+                        onClick={(event) => handleMenuItemClick(event, index)}
+                      >
+                        <Typography variant="h7">{option}</Typography>
+                      </MenuItem>
+                    </Link>
                   ))}
                 </MenuList>
               </ClickAwayListener>
