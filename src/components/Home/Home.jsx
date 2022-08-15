@@ -4,8 +4,14 @@ import Contact from './Contact/Contact'
 import Intro from './Intro/Intro'
 import Testimonials from './Testimonials/Testimonials'
 import Works from './Works/Works'
+import { useEffect } from 'react'
 
-const Home = () => {
+const Home = ({setItems}) => {
+useEffect(() => {
+  setItems(['Home', 'About', 'Works', 'Testimonials', 'Contact']);
+}, [])
+
+
   return (
     <>
         <Intro />

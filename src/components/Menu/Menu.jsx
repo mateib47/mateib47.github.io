@@ -1,10 +1,9 @@
 import React from 'react';
 import "./menu.scss";
 
-const items = ['Home', 'About', 'Portofolio', 'Works', 'Testimonials', 'Contact'];
 const elems = [];
 
-const Menu = ({open, setOpen}) => {
+const Menu = ({open, setOpen, items}) => {
   return (
     <div className={"menu " + (open && "active")}>
         <ul>
