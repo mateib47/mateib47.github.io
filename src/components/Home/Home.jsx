@@ -5,10 +5,11 @@ import Intro from './Intro/Intro'
 import Testimonials from './Testimonials/Testimonials'
 import Works from './Works/Works'
 import { useEffect } from 'react'
+import Experience from './Experience/Experience'
 
 const Home = ({setItems}) => {
 useEffect(() => {
-  setItems(['Home', 'About', 'Works', 'Testimonials', 'Contact']);
+  setItems(['Home', 'About','Experience', 'Works', 'Testimonials', 'Contact']);
 }, [])
 
 
@@ -16,6 +17,7 @@ useEffect(() => {
     <>
         <Intro />
         <About />
+        <Experience/>
         <Works />
         <Testimonials />
         <Contact />
