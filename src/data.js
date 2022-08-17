@@ -1,3 +1,8 @@
+import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
+import SchoolIcon from "@mui/icons-material/School";
+
+
+
 export async function fetchSectionList(setSections, setLoading, setSelected) {
   try {
     const result = await fetch(process.env.REACT_APP_API + "/portfolio/get");
@@ -179,3 +184,74 @@ export const person = {
   society and the world.`,
   boldedWords: ["University of Twente", "Honours", "web-development"],
 };
+
+export const experience = [
+  {
+    title: "Clik",
+    description:"Fullstack React Native developer",
+    date: "2022 - present",
+    color: "text.primary",
+    iconComponent: <DeveloperModeIcon />,
+  },
+  {
+    title: "University of Twente",
+    description:"Bsc Technical Computer Science",
+    date: "2020 - 2023",
+    color: "text.primary",
+    iconComponent: <SchoolIcon />,
+  },
+  {
+    title: "'Tudor Vianu' National collage of computer science",
+    description:"Mathematics and intensive informatics",
+    date: "2016 - 2020",
+    color: "text.primary",
+    iconComponent: <SchoolIcon />,
+  },
+]
+{/* <TimelineItem>
+   
+        <TimelineItem>
+          <TimelineOppositeContent
+            sx={{ m: "auto 0" }}
+            align="right"
+            variant="body2"
+            color="text.secondary"
+          >
+            2020 - 2023
+          </TimelineOppositeContent>
+          <TimelineSeparator sx={{flex:'inherit'}}>
+            <TimelineConnector />
+            <TimelineDot>
+              <SchoolIcon />
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent sx={{ py: "12px", px: 2 }}>
+            <Typography variant="h6" component="span">
+              University of Twente
+            </Typography>
+            <Typography>Bsc Technical Computer Science</Typography>
+          </TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent
+            sx={{ m: "auto 0" }}
+            variant="body2"
+            color="text.secondary"
+          >
+            2016 - 2020
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineConnector />
+            <TimelineDot color="primary">
+              <SchoolIcon />
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent sx={{ py: "12px", px: 2 }}>
+            <Typography variant="h6" component="span">
+              "Tudor Vianu" National collage of computer science
+            </Typography>
+            <Typography>Mathematics and intensive informatics</Typography>
+          </TimelineContent>
+        </TimelineItem> */}

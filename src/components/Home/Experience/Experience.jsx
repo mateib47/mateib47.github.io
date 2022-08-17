@@ -12,12 +12,16 @@ import HotelIcon from "@mui/icons-material/Hotel";
 import RepeatIcon from "@mui/icons-material/Repeat";
 import Typography from "@mui/material/Typography";
 import SchoolIcon from "@mui/icons-material/School";
-import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
+import Paper from "@mui/material/Paper";
+import { experience } from "../../../data";
 
 const Experience = () => {
   //todo fix icons not visible
+  console.log(experience);
   return (
     <div className="experience">
+              <Paper style={{ backgroundColor: "#a5b5a7" }}>
+
       <Timeline
         position="alternate"
         sx={{
@@ -27,77 +31,47 @@ const Experience = () => {
           alignItems: "center",
         }}
       >
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: "auto 0" }}
-            align="right"
-            variant="body2"
-            color="text.secondary"
-          >
-            2022 - present
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector sx={{ bgcolor: "blue" }} />
-            <TimelineDot color="red">
-              <DeveloperModeIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "12px", px: 2 }}>
-            <Typography variant="h6" component="span">
-              Clik
-            </Typography>
-            <Typography>Fullstack React Native developer</Typography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: "auto 0" }}
-            align="right"
-            variant="body2"
-            color="text.secondary"
-          >
-            2020 - 2023
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot>
-              <SchoolIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "12px", px: 2 }}>
-            <Typography variant="h6" component="span">
-              University of Twente
-            </Typography>
-            <Typography>Bsc Technical Computer Science</Typography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: "auto 0" }}
-            variant="body2"
-            color="text.secondary"
-          >
-            2016 - 2020
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="primary">
-              <SchoolIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "12px", px: 2 }}>
-            <Typography variant="h6" component="span">
-              "Tudor Vianu" National collage of computer science
-            </Typography>
-            <Typography>Mathematics and intensive informatics</Typography>
-          </TimelineContent>
-        </TimelineItem>
+        {experience.map((x) => (<ExperienceItem color={x.color} title={x.title} description={x.description} date={x.date} iconComponent={x.iconComponent} />) )}
       </Timeline>
+      </Paper>
     </div>
   );
 };
+
+
+const ExperienceItem = ({ color, title, description,date, iconComponent }) => {
+  return (
+    <>
+      <TimelineItem>
+        <TimelineOppositeContent
+          sx={{ m: "auto 0" }}
+          align="right"
+          variant="body2"
+          color={color}
+        >
+          {date}
+          </TimelineOppositeContent>
+        <TimelineSeparator sx={{flex:"inherit"}}>
+          <TimelineConnector />
+          <TimelineDot>{iconComponent}</TimelineDot>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent
+          sx={{ py: "12px", px: 2 }}
+        >
+          <Typography
+            variant="h6"
+            component="span"
+          >
+            {title}
+          </Typography>
+          <Typography >
+            {description}
+          </Typography>
+        </TimelineContent>
+      </TimelineItem>
+    </>
+  )
+}
 
 export default Experience;
