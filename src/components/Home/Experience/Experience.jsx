@@ -20,7 +20,6 @@ const Experience = () => {
   console.log(experience);
   return (
     <div className="experience">
-              <Paper style={{ backgroundColor: "#a5b5a7" }}>
 
       <Timeline
         position="alternate"
@@ -33,7 +32,6 @@ const Experience = () => {
       >
         {experience.map((x) => (<ExperienceItem color={x.color} title={x.title} description={x.description} date={x.date} iconComponent={x.iconComponent} />) )}
       </Timeline>
-      </Paper>
     </div>
   );
 };
