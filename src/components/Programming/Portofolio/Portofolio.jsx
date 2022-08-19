@@ -9,13 +9,9 @@ import {
   fetchProjectsBySection,
 } from "../../../data";
 import { useEffect } from "react";
-import { useRef } from "react";
-import CircularProgress from "@mui/material/CircularProgress";
-import Box from "@mui/material/Box";
 import Progress from "../../Progress/Progress";
 import ProjectExtended from "./ProjectExtended/ProjectExtended";
-import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
+import Zoom from "@mui/material/Zoom";
 
 const Portofolio = () => {
   const [selected, setSelected] = useState("");
@@ -25,9 +21,6 @@ const Portofolio = () => {
   const [sectLoading, setSectLoading] = useState(false);
   const [projectDisplay, setProjectDisplay] = useState();
 
-  //const projectListElem = useRef();
-
-  //const list = fetchSectionList(setSections);
   useEffect(() => {
     setSectLoading(true);
     fetchSectionList(setSections, setSectLoading, setSelected);
@@ -37,11 +30,9 @@ const Portofolio = () => {
     fetchProjectsBySection(selected, setData, setLoading);
   }, [selected]);
 
-  useEffect(() => {
-    console.log(projectDisplay);
-  }, [projectDisplay]);
-
-  //todo on section change, old projects are renderedagain for a short time
+  // useEffect(() => {
+  //   console.log(projectDisplay);
+  // }, [projectDisplay]);
 
   return (
     <div className="portofolio" id="portofolio">
@@ -66,14 +57,26 @@ const Portofolio = () => {
       <div className="container">
         {projectDisplay ? (
           <div className="left">
-            <ProjectExtended project={projectDisplay} setProjectDisplay={setProjectDisplay} />
+            <ProjectExtended
+              project={projectDisplay}
+              setProjectDisplay={setProjectDisplay}
+            />
           </div>
         ) : (
           <></>
         )}
         <div className="right">
-            {!loading && !sectLoading ? (
-              data.map((x) => (
+          {!loading && !sectLoading ? (
+            data.map((x) => (
+              <Zoom
+                in={!loading}
+                style={{
+                  transitionDelay: !loading
+                    ? data.indexOf(x) * 200 + "ms"
+                    : "0ms",
+                }}
+              >
+                <div>
                   <Project
                     id={x.id}
                     img={x.img}
@@ -82,10 +85,12 @@ const Portofolio = () => {
                     setProjectDisplay={setProjectDisplay}
                     projectObj={x}
                   />
-              ))
-            ) : (
-                <Progress />
-            )}
+                </div>
+              </Zoom>
+            ))
+          ) : (
+            <Progress />
+          )}
         </div>
       </div>
     </div>
