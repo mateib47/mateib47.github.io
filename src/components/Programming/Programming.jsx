@@ -1,5 +1,6 @@
 import React from 'react'
 import Portofolio from './Portofolio/Portofolio'
+import Languages from './Languages/Languages';
 import { useEffect } from 'react';
 
 const Programming = ({setItems}) => {
@@ -9,6 +10,7 @@ const Programming = ({setItems}) => {
   
   return (
     <>
+        <Languages/>
         <Portofolio/>
     </>
   )
