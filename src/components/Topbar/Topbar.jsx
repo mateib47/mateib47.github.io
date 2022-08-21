@@ -4,8 +4,7 @@ import { person } from "../../data";
 import Selector from "./Selector/Selector";
 import { useState } from "react";
 
-const Topbar = ({ open, setOpen }) => {
-
+const Topbar = ({ open, setOpen, setTheme }) => {
   const openInNewTab = (url) => {
     const newWindow = window.open(url, "_blank", "noopener,noreferrer");
     if (newWindow) newWindow.opener = null;
@@ -16,12 +15,10 @@ const Topbar = ({ open, setOpen }) => {
     <div className={"topbar " + (open && "active")}>
       <div className="wrapper">
         <div className="left">
-          <a className="logo">
-            matei.
-          </a>
+          <a className="logo">matei.</a>
         </div>
         <div className="center">
-          <Selector />
+          <Selector setTheme={setTheme} />
         </div>
         <div className="right">
           <div className="hamburger" onClick={() => setOpen(!open)}>

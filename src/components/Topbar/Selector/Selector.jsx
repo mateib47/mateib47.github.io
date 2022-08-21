@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import { siteModes } from "../../../data";
 import Typography from "@mui/material/Typography";
 
-const Selector = () => {
+const Selector = ({ setTheme }) => {
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -26,6 +26,7 @@ const Selector = () => {
     console.log(siteModes[index]);
     setSelectedIndex(index);
     setOpen(false);
+    setTheme(index);
   };
 
   const handleToggle = () => {
@@ -78,7 +79,10 @@ const Selector = () => {
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList id="split-button-menu" autoFocusItem>
                   {siteModes.map((option, index) => (
-                    <Link to={"/" + option} style={{ textDecoration: 'none', color:'inherit' }}>
+                    <Link
+                      to={"/" + option}
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
                       <MenuItem
                         key={option}
                         selected={index === selectedIndex}
