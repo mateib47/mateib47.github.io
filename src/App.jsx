@@ -11,7 +11,6 @@ import {
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
-
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [items, setItems] = useState([
@@ -23,34 +22,36 @@ const App = () => {
     "Contact",
   ]);
   const [theme, setTheme] = useState(0);
-  console.log(theme)
+  console.log(theme);
 
-
-  const themes = [createTheme({
-    palette: {
-      primary: {
-        main: "#13678A",
+  const themes = [
+    createTheme({
+      palette: {
+        primary: {
+          main: "#13678A",
+        },
+        secondary: {
+          main: "#45C4B0",
+        },
+        background: {
+          default: "#fff",
+        },
       },
-      secondary: {
-        main: "#45C4B0",
+    }),
+    createTheme({
+      palette: {
+        primary: {
+          main: "#80CC66",
+        },
+        secondary: {
+          main: "#00AB5B",
+        },
+        background: {
+          default: "#2E3333",
+        },
       },
-      background:{
-        default:'#fff'
-      }
-    },
-  }),createTheme({
-    palette: {
-      primary: {
-        main: "#80CC66",
-      },
-      secondary: {
-        main: "#00AB5B",
-      },
-      background:{
-        default:'#2E3333'
-      }
-    },
-  })]
+    }),
+  ];
 
   //update sections of topbar menu
   return (
