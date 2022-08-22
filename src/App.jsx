@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import Container from "@mui/material/Container";
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,6 +37,9 @@ const App = () => {
         background: {
           default: "#fff",
         },
+        text: {
+          default: "#000",
+        },
       },
     }),
     createTheme({
@@ -48,6 +52,9 @@ const App = () => {
         },
         background: {
           default: "#2E3333",
+        },
+        text: {
+          default: "#00AB5B",
         },
       },
     }),
@@ -63,7 +70,11 @@ const App = () => {
           <Topbar open={menuOpen} setOpen={setMenuOpen} setTheme={setTheme} />
           <Sidebar />
           <Menu open={menuOpen} setOpen={setMenuOpen} items={items} />
-          <div className="sections">
+          <Container
+            className="sections"
+            sx={{ backgroundColor: "background.default" }}
+            maxWidth="xl"
+          >
             <Routes>
               <Route path="/" element={<Navigate to="/home" />} />
               <Route path="/home" element={<Home setItems={setItems} />} />
@@ -72,7 +83,7 @@ const App = () => {
                 element={<Programming setItems={setItems} />}
               />
             </Routes>
-          </div>
+          </Container>
         </div>
       </Router>
     </ThemeProvider>

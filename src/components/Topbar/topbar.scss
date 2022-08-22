@@ -22,7 +22,6 @@
             align-items: center;
 
             .logo{
-                color:$mainColor;
                 font-size: 40px;
                 font-weight: 700;
                 text-decoration: none;
@@ -66,7 +65,7 @@
                 span{
                     width: 100%;
                     height: 3px;
-                    background-color: $mainColor;
+                    background-color: red; // fix color of hamburger menu to text default; could not fix it yet
                     transform-origin: left;
                     transition: all 2s ease;
                 }

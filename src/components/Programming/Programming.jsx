@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 
 const Programming = ({setItems}) => {
   useEffect(() => {
-    setItems([ 'Portofolio']);
+    setItems([ 'Languages','Portofolio']);
   }, [])
   
   return (

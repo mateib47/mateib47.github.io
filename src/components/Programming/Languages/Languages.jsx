@@ -16,7 +16,7 @@ const Languages = () => {
     <div className="languages">
       <div className="left">
         <div className="imgContainer">
-        <TerminalIcon sx={{fontSize: '290px'}} />
+        <TerminalIcon sx={{fontSize: '290px', color:'text.default'}} />
 
         </div>
       </div>
@@ -26,8 +26,8 @@ const Languages = () => {
         >
           {data.map((x) => (
             <ListItem alignItems="flex-centre">
-              <ListItemAvatar>
-                <Avatar alt="Language icon" />
+              <ListItemAvatar >
+                <Avatar alt="Language icon"  />
               </ListItemAvatar>
               <ListItemText primary={x} />
             </ListItem>

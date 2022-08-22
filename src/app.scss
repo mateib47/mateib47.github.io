@@ -5,13 +5,13 @@
     .sections{
         width: 100%;
         height: calc(100vh - 70px);
-        background-color: white;
         position: relative;
         top: 70px;
         scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
         scrollbar-width: none;
         margin: auto;
+        transition: all 2s ease-in;
 
         &::-webkit-scrollbar{
             display: none;
