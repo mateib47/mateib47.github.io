@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import Progress from "../../Progress/Progress";
 import ProjectExtended from "./ProjectExtended/ProjectExtended";
 import Zoom from "@mui/material/Zoom";
+import Typography from '@mui/material/Typography';
 
 const Portofolio = () => {
   const [selected, setSelected] = useState("");
@@ -36,7 +37,7 @@ const Portofolio = () => {
 
   return (
     <div className="portofolio" id="portofolio">
-      <h1>Portofolio</h1>
+      <Typography variant="h1" color='text.default'>Portofolio</Typography>
       <ul>
         {!sectLoading ? (
           sections.map((item) => (

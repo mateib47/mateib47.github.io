@@ -22,8 +22,18 @@ const App = () => {
     "Testimonials",
     "Contact",
   ]);
-  const [theme, setTheme] = useState(0);
-  console.log(theme);
+  const [theme, _setTheme] = useState(0);
+  const setTheme = (theme) => {
+    // Some side-effect here ...
+    localStorage.setItem("Theme", theme);
+    _setTheme(theme);
+    // ... or there
+  };
+
+  useEffect(() => {
+    let theme = localStorage.getItem("Theme") || 0;
+    setTheme(theme);
+  }, []);
 
   const themes = [
     createTheme({
