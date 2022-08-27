@@ -1,4 +1,4 @@
-import { Topbar, Menu, Sidebar, Home, Programming } from "./components";
+import { Topbar, Menu, Sidebar, Home, Programming, PublicSpeak } from "./components";
 import "./app.scss";
 import { useState } from "react";
 import {
@@ -68,6 +68,22 @@ const App = () => {
         },
       },
     }),
+    createTheme({
+      palette: {
+        primary: {
+          main: "red",
+        },
+        secondary: {
+          main: "red",
+        },
+        background: {
+          default: "#fff",
+        },
+        text: {
+          default: "#000",
+        },
+      },
+    }),
   ];
 
   //update sections of topbar menu
@@ -91,6 +107,10 @@ const App = () => {
               <Route
                 path="/programming"
                 element={<Programming setItems={setItems} />}
+              />
+              <Route
+                path="/publicspeaking"
+                element={<PublicSpeak setItems={setItems} />}
               />
             </Routes>
           </Container>
