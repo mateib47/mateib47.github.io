@@ -1,6 +1,6 @@
 import { Topbar, Menu, Sidebar, Home, Programming, PublicSpeak } from "./components";
 import "./app.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -24,15 +24,15 @@ const App = () => {
   ]);
   const [theme, _setTheme] = useState(0);
   const setTheme = (theme) => {
-    // Some side-effect here ...
     localStorage.setItem("Theme", theme);
     _setTheme(theme);
-    // ... or there
   };
 
   useEffect(() => {
-    let theme = localStorage.getItem("Theme") || 0;
-    setTheme(theme);
+    let theme = localStorage.getItem("Theme");
+    if(theme){
+      _setTheme(theme)
+    }
   }, []);
 
   const themes = [
@@ -71,10 +71,42 @@ const App = () => {
     createTheme({
       palette: {
         primary: {
-          main: "red",
+          main: "##F05427",
         },
         secondary: {
-          main: "red",
+          main: "##0D8160",
+        },
+        background: {
+          default: "#fff",
+        },
+        text: {
+          default: "#000",
+        },
+      },
+    }),
+    createTheme({
+      palette: {
+        primary: {
+          main: "#FFFE00",
+        },
+        secondary: {
+          main: "#2B94FF",
+        },
+        background: {
+          default: "#fff",
+        },
+        text: {
+          default: "#000",
+        },
+      },
+    }),
+    createTheme({
+      palette: {
+        primary: {
+          main: "#FF0000",
+        },
+        secondary: {
+          main: "#FF0000",
         },
         background: {
           default: "#fff",
@@ -93,7 +125,7 @@ const App = () => {
 
       <Router>
         <div className="app">
-          <Topbar open={menuOpen} setOpen={setMenuOpen} setTheme={setTheme} />
+          <Topbar open={menuOpen} setOpen={setMenuOpen} setTheme={setTheme} theme={theme} />
           <Sidebar />
           <Menu open={menuOpen} setOpen={setMenuOpen} items={items} />
           <Container
@@ -109,7 +141,7 @@ const App = () => {
                 element={<Programming setItems={setItems} />}
               />
               <Route
-                path="/publicspeaking"
+                path="/public%20speaking"
                 element={<PublicSpeak setItems={setItems} />}
               />
             </Routes>

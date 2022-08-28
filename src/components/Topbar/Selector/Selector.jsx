@@ -13,18 +13,16 @@ import { Link } from "react-router-dom";
 import { siteModes } from "../../../data";
 import Typography from "@mui/material/Typography";
 
-const Selector = ({ setTheme }) => {
+const Selector = ({ theme, setTheme }) => {
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
-  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const handleClick = () => {
-    console.info(`You clicked ${siteModes[selectedIndex]}`);
+    console.info(`You clicked ${siteModes[theme]}`);
   };
 
   const handleMenuItemClick = (event, index) => {
     console.log(siteModes[index]);
-    setSelectedIndex(index);
     setOpen(false);
     setTheme(index);
   };
@@ -48,7 +46,7 @@ const Selector = ({ setTheme }) => {
         ref={anchorRef}
         aria-label="split button"
       >
-        <Button onClick={handleClick}>{siteModes[selectedIndex]}</Button>
+        <Button onClick={handleClick}>{siteModes[theme] }</Button>
         <Button
           size="small"
           aria-controls={open ? "split-button-menu" : undefined}
@@ -85,7 +83,7 @@ const Selector = ({ setTheme }) => {
                     >
                       <MenuItem
                         key={option}
-                        selected={index === selectedIndex}
+                        selected={index === theme}
                         onClick={(event) => handleMenuItemClick(event, index)}
                       >
                         <Typography variant="h7">{option}</Typography>

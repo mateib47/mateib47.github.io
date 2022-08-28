@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 
-const Topbar = ({ open, setOpen, setTheme }) => {
+const Topbar = ({ open, setOpen, setTheme, theme }) => {
   const openInNewTab = (url) => {
     const newWindow = window.open(url, "_blank", "noopener,noreferrer");
     if (newWindow) newWindow.opener = null;
@@ -22,7 +22,7 @@ const Topbar = ({ open, setOpen, setTheme }) => {
           <Typography className="logo" sx={{color:'text.default'}} >matei.</Typography>
         </div>
         <div className="center">
-          <Selector setTheme={setTheme} />
+          <Selector setTheme={setTheme} theme={theme} />
         </div>
         <div className="right">
           <Container  className="hamburger" onClick={() => setOpen(!open)}>
