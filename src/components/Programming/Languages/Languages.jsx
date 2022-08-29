@@ -7,34 +7,48 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import TerminalIcon from "@mui/icons-material/Terminal";
-import Box from '@mui/material/Box';
+import Box from "@mui/material/Box";
+import swift from "programming-languages-logos/src/swift/swift.svg";
+import { styled } from "@mui/material/styles";
+import Paper from "@mui/material/Paper";
+import Masonry from "@mui/lab/Masonry";
+import Container from "@mui/material/Container";
+import javascript from 'programming-languages-logos/src/javascript/javascript.svg'
+import java from 'programming-languages-logos/src/java/java.png'
+//TODO add all logos
 
 
 const Languages = () => {
-  const data = ["Javascript", "HTML", "Css", "Java", "Python", "C++"];
+  const heights = [
+    150, 90, 70, 110, 150, 130, 80, 50, 90, 100, 150, 50, 80,
+  ];
+
+  const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+    ...theme.typography.body2,
+    padding: theme.spacing(0.5),
+    textAlign: "center",
+    color: theme.palette.text.secondary,
+  }));
+
   return (
     <div className="languages">
-      <div className="left">
-        <div className="imgContainer">
-        <TerminalIcon sx={{fontSize: '290px', color:'text.default'}} />
-
-        </div>
-      </div>
-      <div className="right">
-        <List
-          sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
-        >
-          {data.map((x) => (
-            <ListItem alignItems="flex-centre">
-              <ListItemAvatar >
-                <Avatar alt="Language icon"  />
-              </ListItemAvatar>
-              <ListItemText primary={x} />
-            </ListItem>
-          ))}
-        </List>
-      </div>
+<Box
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      sx={{ width: '70%', minHeight: '80%', margin:'auto' }}
+    >
+      <Masonry columns={4} spacing={2}>
+        {heights.map((height, index) => (
+          <Item key={index} sx={{ height }}>
+            <img src={java} style={{height:"90%", overflow: 'hidden'}} />
+          </Item>
+        ))}
+      </Masonry>
+    </Box>
     </div>
+    
   );
 };
 
