@@ -1,18 +1,20 @@
-import React from 'react';
-import { useEffect } from 'react';
-import TedVideo from './TedVideo';
-import Home from './Home';
+import React from "react";
+import { useEffect } from "react";
+import TedVideo from "./TedVideo";
+import Home from "./Home";
+import Story from "./Story";
 
-const PublicSpeak = ({setItems}) => {
-    useEffect(() => {
-        setItems([ 'Home','Story', 'Video']);
-      }, [])
+const PublicSpeak = ({ setItems }) => {
+  useEffect(() => {
+    setItems(["Home", "Story", "Video"]);
+  }, []);
   return (
     <>
-         <Home />
-        <TedVideo />
+      <Home />
+      <Story />
+      <TedVideo />
     </>
-  )
-}
+  );
+};
 
-export default PublicSpeak
+export default PublicSpeak;
