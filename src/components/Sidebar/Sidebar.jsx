@@ -1,41 +1,20 @@
-
-import {Person, Mail, LinkedIn, GitHub,Folder} from '@material-ui/icons';
+import { Person, Mail, LinkedIn, GitHub, Folder } from "@material-ui/icons";
 import { person } from "../../data";
-import './sidebar.scss'
+import "./sidebar.scss";
+import Button from "@mui/material/Button";
 
 const Sidebar = () => {
-    const openInNewTab = (url) => {
-        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-        if (newWindow) newWindow.opener = null
-      }
-
   return (
-    <div className='sidebar'>
-      <div className='line'></div>
-      <div
-        className="itemContainer"
-        onClick={(e) => {
-          openInNewTab(`mailto:${person.email}`);
-        }}
-      >
+    <div className="sidebar">
+      <Button href={`mailto:${person.email}`} target="_blank" >
         <Mail className="icon" />
-      </div>
-      <div
-        className="itemContainer"
-        onClick={(e) => {
-          openInNewTab(person.linkedIn);
-        }}
-      >
+      </Button>
+      <Button href={person.linkedIn} target="_blank">
         <LinkedIn className="icon" />
-      </div>
-      <div
-        className="itemContainer"
-        onClick={(e) => {
-          openInNewTab(person.github);
-        }}
-      >
+      </Button>
+      <Button href={person.linkedIn} target="_blank"> 
         <GitHub className="icon" />
-      </div>
+      </Button>
     </div>
   );
 };

@@ -1,19 +1,21 @@
-import React from 'react'
-import Portofolio from './Portofolio/Portofolio'
-import Languages from './Languages/Languages';
-import { useEffect } from 'react';
+import React from "react";
+import Portofolio from "./Portofolio/Portofolio";
+import Languages from "./Languages/Languages";
+import { useEffect } from "react";
+import Home from "./Home";
 
-const Programming = ({setItems}) => {
+const Programming = ({ setItems }) => {
   useEffect(() => {
-    setItems([ 'Languages','Portofolio']);
-  }, [])
-  
+    setItems(["Languages", "Portofolio"]);
+  }, []);
+
   return (
     <>
-        <Languages/>
-        <Portofolio/>
+      <Home />
+      <Languages />
+      <Portofolio />
     </>
-  )
-}
+  );
+};
 
-export default Programming
+export default Programming;
