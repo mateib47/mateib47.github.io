@@ -71,16 +71,16 @@ const App = () => {
     createTheme({
       palette: {
         primary: {
-          main: "##F05427",
+          main: "#498EB3",
         },
         secondary: {
-          main: "##0D8160",
+          main: "#498EB3",
         },
         background: {
-          default: "#fff",
+          default: "#A6D3EA",
         },
         text: {
-          default: "#000",
+          default: "#495C66",
         },
       },
     }),

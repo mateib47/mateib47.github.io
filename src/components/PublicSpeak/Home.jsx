@@ -15,7 +15,7 @@ const Img = styled("img")({
 
 const Home = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }} id="intro">
       <Grid container spacing={2} sx={{ width: "100%", height: "100%" }}>
         <Grid container item xs={6} maxWidth="m">
           <Img src="assets/ted.jpg" />

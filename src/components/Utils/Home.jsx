@@ -9,14 +9,13 @@ import { styled } from "@mui/material/styles";
 const Img = styled("img")({
   margin: "auto",
   display: "block",
-  maxWidth: "80%",
+  maxWidth: "100%",
   maxHeight: "100%",
-  borderRadius: "10px",
 });
 
-const Home = () => {
+const Home = ({ image, header, text }) => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }} id="intro">
       <Grid container spacing={2} sx={{ width: "100%", height: "100%" }}>
         <Grid
           container
@@ -29,15 +28,13 @@ const Home = () => {
           <Container
             sx={{
               backgroundColor: "text.default",
+              height: "auto",
               width: "70%",
-              height: "70%",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
+              borderRadius: "50%",
+              display: "block",
             }}
           >
-            <Img src="assets/programming.png" />
+            <Img src={"assets/" + image} />
           </Container>
         </Grid>
         <Grid
@@ -47,16 +44,24 @@ const Home = () => {
           alignItems="center"
           justifyContent="center"
           direction="column"
+          sx={{ paddingLeft: "0" }}
         >
-          <Typography variant="h1" color="initial" sx={{overflow:"hidden"}}>
-            Web developer
-          </Typography>
-          <Typography variant="body1" color="initial">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-            maxime quae, numquam eveniet, ducimus consequuntur cumque ex animi
-            inventore nostrum unde repellat itaque quidem sunt ullam et facere,
-            rem voluptatibus.
-          </Typography>
+          <Box
+            sx={{
+              width: "70%",
+            }}
+          >
+            <Typography
+              variant="h1"
+              color="primary"
+              sx={{ overflow: "hidden", fontWeight:"600" }}
+            >
+              {header}
+            </Typography>
+            <Typography variant="body1" color="primary">
+              {text}
+            </Typography>
+          </Box>
         </Grid>
       </Grid>
     </Box>

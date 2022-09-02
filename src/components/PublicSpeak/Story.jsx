@@ -14,6 +14,7 @@ const Story = () => {
         flexDirection: "column",
         justifyContent: "center",
       }}
+      id="story"
     >
       <Paper
         container

@@ -59,7 +59,7 @@
     margin: 40px;
     -webkit-animation: wind-up 4s infinite;
             animation: wind-up 4s infinite;
-    border: 6px solid darkcyan;
+    border: 6px solid #00AB5B;
     content: '';
     display: block;
     height: 50px;

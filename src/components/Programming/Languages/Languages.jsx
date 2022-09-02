@@ -33,7 +33,7 @@ const Languages = () => {
   }));
 
   return (
-    <div className="languages">
+    <div className="languages" id="languages">
       <Box
         display="flex"
         justifyContent="center"

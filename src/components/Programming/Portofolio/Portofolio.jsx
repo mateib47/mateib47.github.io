@@ -12,7 +12,7 @@ import { useEffect } from "react";
 import Progress from "../../Progress/Progress";
 import ProjectExtended from "./ProjectExtended/ProjectExtended";
 import Zoom from "@mui/material/Zoom";
-import Typography from '@mui/material/Typography';
+import Typography from "@mui/material/Typography";
 
 const Portofolio = () => {
   const [selected, setSelected] = useState("");
@@ -37,61 +37,67 @@ const Portofolio = () => {
 
   return (
     <div className="portofolio" id="portofolio">
-      <Typography variant="h1" color='text.default'>Portofolio</Typography>
-      <ul>
-        {!sectLoading ? (
-          sections.map((item) => (
-            <PortfolioList
-              title={item}
-              id={item}
-              active={selected === item}
-              setSelected={setSelected}
-              key={item}
-              setLoading={setLoading}
-              setProjectDisplay={setProjectDisplay}
-            />
-          ))
-        ) : (
-          <></>
-        )}
-      </ul>
-      <div className="container">
-        {projectDisplay ? (
-          <div className="left">
-            <ProjectExtended
-              project={projectDisplay}
-              setProjectDisplay={setProjectDisplay}
-            />
-          </div>
-        ) : (
-          <></>
-        )}
-        <div className="right">
-          {!loading && !sectLoading ? (
-            data.map((x) => (
-              <Zoom
-                in={!loading}
-                style={{
-                  transitionDelay: !loading
-                    ? data.indexOf(x) * 200 + "ms"
-                    : "0ms",
-                }}
-              >
-                <div>
-                  <Project
-                    id={x.id}
-                    img={x.img}
-                    title={x.name}
-                    description={x.description}
-                    setProjectDisplay={setProjectDisplay}
-                    projectObj={x}
-                  />
-                </div>
-              </Zoom>
+      <div className="top">
+        <Typography variant="h1" color="text.default">
+          Portofolio
+        </Typography>
+        <ul>
+          {!sectLoading ? (
+            sections.map((item) => (
+              <PortfolioList
+                title={item}
+                id={item}
+                active={selected === item}
+                setSelected={setSelected}
+                key={item}
+                setLoading={setLoading}
+                setProjectDisplay={setProjectDisplay}
+              />
             ))
           ) : (
-            <Progress />
+            <></>
           )}
+        </ul>
+      </div>
+      <div className="bottom">
+        <div className="container">
+          {projectDisplay ? (
+            <div className="left">
+              <ProjectExtended
+                project={projectDisplay}
+                setProjectDisplay={setProjectDisplay}
+              />
+            </div>
+          ) : (
+            <></>
+          )}
+          <div className="right">
+            {!loading && !sectLoading ? (
+              data.map((x) => (
+                <Zoom
+                  in={!loading}
+                  style={{
+                    transitionDelay: !loading
+                      ? data.indexOf(x) * 200 + "ms"
+                      : "0ms",
+                  }}
+                >
+                  <div>
+                    <Project
+                      id={x.id}
+                      img={x.img}
+                      title={x.name}
+                      description={x.description}
+                      setProjectDisplay={setProjectDisplay}
+                      projectObj={x}
+                    />
+                  </div>
+                </Zoom>
+              ))
+            ) : (
+              <Progress />
+            )}
+          </div>
         </div>
       </div>
     </div>

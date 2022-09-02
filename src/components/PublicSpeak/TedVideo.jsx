@@ -11,6 +11,7 @@ const TedVideo = () => {
       alignItems="center"
       justifyContent="center"
       style={{ minHeight: "100vh" }}
+      id="video"
     >
       <Grid item xs={8}>
         <iframe
