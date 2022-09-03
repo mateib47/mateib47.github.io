@@ -4,7 +4,6 @@
     width: 100%;
     height: 70px;
     background-color:rgba(0, 0, 0, 0);
-    color: $mainColor;
     position: fixed;
     top: 0;
     z-index: 3;
@@ -65,7 +64,6 @@
                 span{
                     width: 100%;
                     height: 3px;
-                    background-color: red; // fix color of hamburger menu to text default; could not fix it yet
                     transform-origin: left;
                     transition: all 2s ease;
                 }

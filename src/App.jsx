@@ -1,4 +1,4 @@
-import { Topbar, Menu, Sidebar, Home, Programming, PublicSpeak } from "./components";
+import { Topbar, Menu, Sidebar, Home, Programming, PublicSpeak, Negotiation } from "./components";
 import "./app.scss";
 import { useState, useEffect } from "react";
 import {
@@ -143,6 +143,10 @@ const App = () => {
               <Route
                 path="/public%20speaking"
                 element={<PublicSpeak setItems={setItems} />}
+              />
+              <Route
+                path="/negotiation"
+                element={<Negotiation setItems={setItems} />}
               />
             </Routes>
           </Container>

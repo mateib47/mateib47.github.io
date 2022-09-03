@@ -6,8 +6,11 @@ import { useState } from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import useTheme from "@mui/material/styles/useTheme";
 
 const Topbar = ({ open, setOpen, setTheme, theme }) => {
+  const muiTheme = useTheme();
+
   return (
     <Container
       className={"topbar " + (open && "active")}
@@ -25,12 +28,9 @@ const Topbar = ({ open, setOpen, setTheme, theme }) => {
         </div>
         <div className="right">
           <Container className="hamburger" onClick={() => setOpen(!open)}>
-            <span
-              className="line1"
-              style={{ backgroundColor: "text.default" }}
-            ></span>
-            <span className="line2"></span>
-            <span className="line3"></span>
+            <span className="line1" style={{ backgroundColor: muiTheme.palette.primary.main  }}></span>
+            <span className="line2" style={{ backgroundColor: muiTheme.palette.primary.main  }}></span>
+            <span className="line3" style={{ backgroundColor: muiTheme.palette.primary.main  }}></span>
           </Container>
         </div>
       </div>
