@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import Home from "../Utils/Home";
 import Skills from "../Utils/Skills";
+import Carousel from "../Utils/Carousel/Carousel";
 
 const skills = [
   {
@@ -20,6 +21,29 @@ const skills = [
     body: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio at voluptatibus tempora doloremque repellat eligendi autem labore esse, ipsum nobis repudiandae non eos tenetur nostrum adipisci officiis error, exercitationem asperiores",
   },
 ];
+const experience = [
+  {
+    id: 1,
+    icon: "./assets/globe.png",
+    title: "Title",
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repellat eos similique inventore quod est id odit, saepe impedit, dignissimos dolore architecto!",
+    img: "http://mateibucur.me/images/documentation-page.png",
+  },
+  {
+    id: 2,
+    icon: "./assets/mobile.png",
+    title: "Title1",
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repellat eos similique inventore quod est id odit, saepe impedit, dignissimos dolore architecto!",
+    img: "http://mateibucur.me/images/tribute-page.png",
+  },
+  {
+    id: 3,
+    icon: "./assets/writing.png",
+    title: "Title2",
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repellat eos similique inventore quod est id odit, saepe impedit, dignissimos dolore architecto!",
+    img: "http://mateibucur.me/images/survey.png",
+  },
+];
 
 const Negotiation = ({ setItems }) => {
   useEffect(() => {
@@ -35,6 +59,7 @@ const Negotiation = ({ setItems }) => {
         }
       />
       <Skills skills={skills} />
+      <Carousel list = {experience} />
     </>
   );
 };
