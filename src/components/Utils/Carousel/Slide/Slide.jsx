@@ -15,7 +15,7 @@ const Slide = ({icon, title, desc, img}) => {
     <Container maxWidth="xl"  sx={{width:'100vw',backgroundColor:'primary.main' }}>
       <Container sx={{width:'50%', display:'flex', backgroundColor:'background.default', maxHeight:"100%", padding:"50px 10px"}}>
         <Box sx={{flex:1}}>
-          <div className="leftContainer">
+          <div>
             <h1>{title}</h1>
             <p>{desc}</p>
           </div>

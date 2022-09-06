@@ -14,14 +14,33 @@ import Typography from "@mui/material/Typography";
 import SchoolIcon from "@mui/icons-material/School";
 import Paper from "@mui/material/Paper";
 import { experience } from "../../../data";
+import { styled } from "@mui/material/styles";
+
+
+const MyTimeline = styled(Timeline)(({ theme }) => ({
+  transform: "rotate(90deg)",
+}));
+
+const MyTimelineContent = styled(TimelineContent)(({ theme }) => ({
+  textAlign: "left",
+}));
+
+const MyTypography = styled(Typography)(({ theme }) => ({
+  display: "inline-block",
+  transform: "rotate(-90deg)",
+  textAlign: "center",
+}));
+
+const MyTimelineDot = styled(TimelineDot)(({ theme }) => ({
+  display: "inline-block",
+  transform: "rotate(-90deg)",
+  textAlign: "center",
+}));
 
 const Experience = () => {
-  //todo fix icons not visible
-  console.log(experience);
   return (
     <div className="experience">
-
-      <Timeline
+      <MyTimeline
         position="alternate"
         sx={{
           display: "flex",
@@ -30,14 +49,21 @@ const Experience = () => {
           alignItems: "center",
         }}
       >
-        {experience.map((x) => (<ExperienceItem color={x.color} title={x.title} description={x.description} date={x.date} iconComponent={x.iconComponent} />) )}
-      </Timeline>
+        {experience.map((x) => (
+          <ExperienceItem
+            color={x.color}
+            title={x.title}
+            description={x.description}
+            date={x.date}
+            iconComponent={x.iconComponent}
+          />
+        ))}
+      </MyTimeline>
     </div>
   );
 };
 
-
-const ExperienceItem = ({ color, title, description,date, iconComponent }) => {
+const ExperienceItem = ({ color, title, description, date, iconComponent }) => {
   return (
     <>
       <TimelineItem>
@@ -47,29 +73,43 @@ const ExperienceItem = ({ color, title, description,date, iconComponent }) => {
           variant="body2"
           color={color}
         >
-          {date}
-          </TimelineOppositeContent>
-        <TimelineSeparator sx={{flex:"inherit"}}>
+          <MyTypography variant="body1">{date}</MyTypography>
+          
+        </TimelineOppositeContent>
+        <TimelineSeparator sx={{ flex: "inherit" }}>
           <TimelineConnector />
-          <TimelineDot>{iconComponent}</TimelineDot>
+          <MyTimelineDot>{iconComponent}</MyTimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent
-          sx={{ py: "12px", px: 2 }}
-        >
-          <Typography
-            variant="h6"
-            component="span"
-          >
+        <MyTimelineContent sx={{ py: "12px", px: 2 }}>
+          <MyTypography variant="h6" component="span">
             {title}
-          </Typography>
-          <Typography >
-            {description}
-          </Typography>
-        </TimelineContent>
+          </MyTypography>
+          <MyTypography>{description}</MyTypography>
+        </MyTimelineContent>
       </TimelineItem>
     </>
-  )
-}
+  );
+};
+
+// const useStyles =makeStyles((theme) => ({
+//   timeline: {
+
+//   },
+//   timelineContentContainer: {
+//     textAlign: "left",
+//   },
+//   timelineContent: {
+//     display: "inline-block",
+//     transform: "rotate(-90deg)",
+//     textAlign: "center",
+//     minWidth: 50,
+//   },
+//   timelineIcon: {
+//     transform: "rotate(-90deg)",
+//   },
+//   stretch: { height: "100%" },
+//   item: { display: "flex", flexDirection: "column" },
+// }));
 
 export default Experience;

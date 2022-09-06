@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Home from "../Utils/Home";
 import Skills from "../Utils/Skills";
 import Carousel from "../Utils/Carousel/Carousel";
+import Experience from "./Experience";
 
 const skills = [
   {
