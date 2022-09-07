@@ -11,6 +11,7 @@ export {default as Home} from './Home/Home';
 export {default as Programming} from './Programming/Programming';
 export {default as PublicSpeak} from './PublicSpeak/PublicSpeak';
 export {default as Negotiation} from './Negotiation/Negotiation';
+export {default as Sports} from './Sports/Sports';
 
 
 

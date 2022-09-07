@@ -1,4 +1,4 @@
-import { Topbar, Menu, Sidebar, Home, Programming, PublicSpeak, Negotiation } from "./components";
+import { Topbar, Menu, Sidebar, Home, Programming, PublicSpeak, Negotiation, Sports } from "./components";
 import "./app.scss";
 import { useState, useEffect } from "react";
 import {
@@ -116,6 +116,22 @@ const App = () => {
         },
       },
     }),
+    createTheme({
+      palette: {
+        primary: {
+          main: "#021E73",
+        },
+        secondary: {
+          main: "#9BCAF2",
+        },
+        background: {
+          default: "#F2C791",
+        },
+        text: {
+          default: "#021E73",
+        },
+      },
+    }),
   ];
 
   //update sections of topbar menu
@@ -147,6 +163,10 @@ const App = () => {
               <Route
                 path="/negotiation"
                 element={<Negotiation setItems={setItems} />}
+              />
+              <Route
+                path="/sports"
+                element={<Sports setItems={setItems} />}
               />
             </Routes>
           </Container>
