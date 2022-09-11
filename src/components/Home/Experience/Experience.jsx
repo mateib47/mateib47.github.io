@@ -19,16 +19,21 @@ import { styled } from "@mui/material/styles";
 
 const MyTimeline = styled(Timeline)(({ theme }) => ({
   transform: "rotate(90deg)",
+  maxHeight:"100%"
+
 }));
 
 const MyTimelineContent = styled(TimelineContent)(({ theme }) => ({
   textAlign: "left",
+
 }));
 
 const MyTypography = styled(Typography)(({ theme }) => ({
   display: "inline-block",
   transform: "rotate(-90deg)",
   textAlign: "center",
+  minWidth: 50
+
 }));
 
 const MyTimelineDot = styled(TimelineDot)(({ theme }) => ({
@@ -47,6 +52,7 @@ const Experience = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          minWidth:"100vh"
         }}
       >
         {experience.map((x) => (
@@ -66,7 +72,8 @@ const Experience = () => {
 const ExperienceItem = ({ color, title, description, date, iconComponent }) => {
   return (
     <>
-      <TimelineItem>
+      <TimelineItem sx={{          minHeight:"100%"
+}}>
         <TimelineOppositeContent
           sx={{ m: "auto 0" }}
           align="right"
