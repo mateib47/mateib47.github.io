@@ -45,14 +45,13 @@ const MyTimelineDot = styled(TimelineDot)(({ theme }) => ({
 const Experience = () => {
   return (
     <div className="experience">
-      <MyTimeline
+      <Timeline
         position="alternate"
         sx={{
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          minWidth:"100vh"
         }}
       >
         {experience.map((x) => (
@@ -64,7 +63,7 @@ const Experience = () => {
             iconComponent={x.iconComponent}
           />
         ))}
-      </MyTimeline>
+      </Timeline>
     </div>
   );
 };
@@ -72,28 +71,27 @@ const Experience = () => {
 const ExperienceItem = ({ color, title, description, date, iconComponent }) => {
   return (
     <>
-      <TimelineItem sx={{          minHeight:"100%"
-}}>
+      <TimelineItem>
         <TimelineOppositeContent
           sx={{ m: "auto 0" }}
           align="right"
           variant="body2"
           color={color}
         >
-          <MyTypography variant="body1">{date}</MyTypography>
+          <Typography variant="body1">{date}</Typography>
           
         </TimelineOppositeContent>
         <TimelineSeparator sx={{ flex: "inherit" }}>
           <TimelineConnector />
-          <MyTimelineDot>{iconComponent}</MyTimelineDot>
+          <TimelineDot>{iconComponent}</TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
-        <MyTimelineContent sx={{ py: "12px", px: 2 }}>
-          <MyTypography variant="h6" component="span">
+        <TimelineContent sx={{ py: "12px", px: 2 }}>
+          <Typography variant="h6" component="span">
             {title}
-          </MyTypography>
-          <MyTypography>{description}</MyTypography>
-        </MyTimelineContent>
+          </Typography>
+          <Typography>{description}</Typography>
+        </TimelineContent>
       </TimelineItem>
     </>
   );

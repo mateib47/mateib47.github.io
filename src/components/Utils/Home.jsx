@@ -26,16 +26,23 @@ const Home = ({ image, header, text }) => {
 
   return (
     <Box sx={{ flexGrow: 1 }} id="intro">
-      <Grid container spacing={2} sx={{ width: "100%", height: "100%" }}>
+      <Grid container  sx={{ width: "100%", height: "100%" }}>
         <Grid
           container
           item
-          xs={6}
+          xs={12}
+          md={6}
           alignItems="center"
           justifyContent="center"
           direction="column"
         >
-        <Slide direction="right" in={checked} mountOnEnter unmountOnExit timeout={3000}>
+          <Slide
+            direction="right"
+            in={checked}
+            mountOnEnter
+            unmountOnExit
+            timeout={3000}
+          >
             <Container
               sx={{
                 backgroundColor: "text.default",
@@ -52,7 +59,8 @@ const Home = ({ image, header, text }) => {
         <Grid
           container
           item
-          xs={6}
+          xs={12}
+          md={6}
           alignItems="center"
           justifyContent="center"
           direction="column"

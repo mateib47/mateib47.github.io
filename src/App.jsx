@@ -8,7 +8,7 @@ import {
   useRoutes,
   Navigate,
 } from "react-router-dom";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { createTheme, ThemeProvider, responsiveFontSizes  } from "@mui/material/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@mui/material/Container";
 
@@ -35,8 +35,13 @@ const App = () => {
     }
   }, []);
 
+let globalTheme = createTheme();
+globalTheme = responsiveFontSizes(globalTheme);
+
+
   const themes = [
     createTheme({
+      ...globalTheme,
       palette: {
         primary: {
           main: "#13678A",
@@ -53,6 +58,7 @@ const App = () => {
       },
     }),
     createTheme({
+      ...globalTheme,
       palette: {
         primary: {
           main: "#80CC66",
@@ -69,6 +75,7 @@ const App = () => {
       },
     }),
     createTheme({
+      ...globalTheme,
       palette: {
         primary: {
           main: "#498EB3",
@@ -85,6 +92,7 @@ const App = () => {
       },
     }),
     createTheme({
+      ...globalTheme,
       palette: {
         primary: {
           main: "#FFFE00",
@@ -101,6 +109,7 @@ const App = () => {
       },
     }),
     createTheme({
+      ...globalTheme,
       palette: {
         primary: {
           main: "#FF0000",
@@ -117,6 +126,7 @@ const App = () => {
       },
     }),
     createTheme({
+      ...globalTheme,
       palette: {
         primary: {
           main: "#021E73",
