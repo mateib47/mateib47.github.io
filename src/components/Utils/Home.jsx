@@ -26,7 +26,7 @@ const Home = ({ image, header, text }) => {
 
   return (
     <Box sx={{ flexGrow: 1 }} id="intro">
-      <Grid container  sx={{ width: "100%", height: "100%" }}>
+      <Grid container sx={{ width: "100%", height: "100%" }}>
         <Grid
           container
           item

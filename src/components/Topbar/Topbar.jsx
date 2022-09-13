@@ -14,7 +14,7 @@ const Topbar = ({ open, setOpen, setTheme, theme }) => {
   return (
     <Container
       className={"topbar " + (open && "active")}
-      sx={{ backgroundColor: "background.default" }}
+      sx={{ backgroundColor: "background.default", padding: 0 }}
       maxWidth="xl"
     >
       <div className="wrapper">
@@ -28,9 +28,18 @@ const Topbar = ({ open, setOpen, setTheme, theme }) => {
         </div>
         <div className="right">
           <Container className="hamburger" onClick={() => setOpen(!open)}>
-            <span className="line1" style={{ backgroundColor: muiTheme.palette.primary.main  }}></span>
-            <span className="line2" style={{ backgroundColor: muiTheme.palette.primary.main  }}></span>
-            <span className="line3" style={{ backgroundColor: muiTheme.palette.primary.main  }}></span>
+            <span
+              className="line1"
+              style={{ backgroundColor: muiTheme.palette.primary.main }}
+            ></span>
+            <span
+              className="line2"
+              style={{ backgroundColor: muiTheme.palette.primary.main }}
+            ></span>
+            <span
+              className="line3"
+              style={{ backgroundColor: muiTheme.palette.primary.main }}
+            ></span>
           </Container>
         </div>
       </div>

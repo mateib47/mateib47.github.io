@@ -25,29 +25,37 @@ const Languages = () => {
   const heights = [150, 90, 70, 110, 150, 130, 80, 50, 90, 100, 150, 50, 80];
 
   const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     ...theme.typography.body2,
     padding: theme.spacing(0.5),
     textAlign: "center",
     color: theme.palette.text.secondary,
   }));
 
+  const MyBox = styled(Box)(({ theme }) => ({
+    width: "90%",
+    margin:'auto',
+    height:'80%',
+    [theme.breakpoints.up("md")]: {
+      width: "70%",
+    },
+  }));
+
   return (
     <div className="languages" id="languages">
-      <Box
+      <MyBox
         display="flex"
         justifyContent="center"
         alignItems="center"
-        sx={{ width: "70%", minHeight: "80%", margin: "auto" }}
       >
-        <Masonry columns={4} spacing={2}>
+        <Masonry columns={{xs:3,md:4}} spacing={2}>
           {heights.map((height, index) => (
-            <Item key={index} sx={{ height, overflow: "hidden"  }}>
+            <Item key={index} sx={{ height, overflow: "hidden" }}>
               <img src={java} style={{ height: "90%" }} />
             </Item>
           ))}
         </Masonry>
-      </Box>
+      </MyBox>
     </div>
   );
 };
