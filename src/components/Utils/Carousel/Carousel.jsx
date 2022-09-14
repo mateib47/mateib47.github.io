@@ -6,19 +6,45 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
 
-const Arrow = styled("img")({
+const LArrow = styled("img")(({ theme }) => ({
   position: "absolute",
   height: "50px",
   cursor: "pointer",
-});
+  left: "2%",
+  transform: "rotateY(180deg)",
+  zIndex: 1,
+  [theme.breakpoints.up("md")]: {
+    right: "10%",
+  },
+}));
+const RArrow = styled("img")(({ theme }) => ({
+  position: "absolute",
+  height: "50px",
+  cursor: "pointer",
+  right: "2%",
+  [theme.breakpoints.up("md")]: {
+    right: "10%",
+  },
+}));
+
 const Slider = styled(Box)({
   display: "flex",
   position: "absolute",
   left: "0",
   transition: "all 1s ease-out",
-  maxHeight: "50%",
+  maxHeight: "60%",
   padding: 0,
 });
+
+const MyBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  backgroundColor: theme.palette.primary.main,
+  position: "relative",
+  justifyContent: "center",
+  alignContent: "center",
+  padding: 0,
+  margin: "auto",
+}));
 
 const Carousel = ({ list }) => {
   const length = list.length;
@@ -30,26 +56,11 @@ const Carousel = ({ list }) => {
   };
 
   return (
-    <Box
-      maxWidth="xl"
-      id="works"
-      sx={{
-        display: "flex",
-        backgroundColor: "primary.main",
-        position: "relative",
-        justifyContent: "center",
-        alignContent: "center",
-        padding: 0,
-        margin: "auto",
-      }}
-      justifyContent="center"
-      alignItems="center"
-    >
-      <Arrow
+    <MyBox maxWidth="xl" id="works" justifyContent="center" alignItems="center">
+      <LArrow
         src="assets/arrow.png"
         alt=""
         onClick={() => handleClick("left")}
-        sx={{ left: "100px", transform: "rotateY(180deg)", zIndex: 1 }}
       />
       <Slider
         className="slider"
@@ -59,13 +70,8 @@ const Carousel = ({ list }) => {
           <Slide icon={d.icon} title={d.title} desc={d.desc} img={d.img} />
         ))}
       </Slider>
-      <Arrow
-        src="assets/arrow.png"
-        alt=""
-        onClick={() => handleClick()}
-        sx={{ right: "100px" }}
-      />
-    </Box>
+      <RArrow src="assets/arrow.png" alt="" onClick={() => handleClick()} />
+    </MyBox>
   );
 };
 

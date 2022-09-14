@@ -5,10 +5,12 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import { useState } from "react";
+import Zoom from "@mui/material/Zoom";
+import VizSensor from "react-visibility-sensor";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
   padding: "20px",
   textAlign: "center",
   color: theme.palette.text.secondary,
@@ -18,24 +20,41 @@ const Img = styled("img")({
   display: "block",
   maxWidth: "20%",
   maxHeight: "100%",
-  borderRadius: "50%"
+  borderRadius: "50%",
 });
 
 const Skills = ({ skills }) => {
+  const [show, setShow] = useState(false);
+
   return (
-    <Grid
-      container
-      spacing={2}
-      alignItems="center"
-      justifyContent="center"
-      sx={{ maxWidth: "80%", margin: "auto" }}
+    <VizSensor
+      onChange={(isVisible) => {
+        setShow(isVisible);
+      }}
     >
-      {skills.map((x) => (
-        <Grid item xs={4}>
-          <Skill header={x.header} body={x.body} img={x.img} />
-        </Grid>
-      ))}
-    </Grid>
+      <Grid
+        container
+        spacing={2}
+        alignItems="center"
+        justifyContent="center"
+        sx={{ maxWidth: "80%", margin: "auto" }}
+      >
+        {skills.map((x) => (
+          <Zoom
+            in={show}
+            style={{
+              transitionDelay: show
+                ? skills.indexOf(x) * 200 + "ms"
+                : "1000ms",
+            }}
+          >
+            <Grid item xs={12} md={4}>
+              <Skill header={x.header} body={x.body} img={x.img} />
+            </Grid>
+          </Zoom>
+        ))}
+      </Grid>
+    </VizSensor>
   );
 };
 
@@ -43,10 +62,14 @@ const Skill = ({ img, header, body }) => {
   return (
     <Item>
       <Img src={"assets/" + img} />
-      <Typography variant="h1" color="primary" sx={{fontSize: "32px",fontWeight:"bold", overflow:"hidden", m:3}}>
+      <Typography
+        variant="h4"
+        color="primary"
+        sx={{ fontWeight: "bold", overflow: "hidden", m: 2 }}
+      >
         {header}
       </Typography>
-      <Typography variant="body1" color="secondary" sx={{fontSize: "18px",}}>
+      <Typography variant="body2" color="secondary">
         {body}
       </Typography>
     </Item>

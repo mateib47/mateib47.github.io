@@ -1,29 +1,66 @@
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
-
+import Grid from "@mui/material/Grid";
 
 const Img = styled("img")({
-    margin: "auto",
-    display: "block",
-    maxWidth: "100%",
-    maxHeight: "100%",
-  });
+  margin: "auto",
+  display: "block",
+  maxWidth: "100%",
+  maxHeight: "80%",
+});
 
-const Slide = ({icon, title, desc, img}) => {
+const MyContainer = styled(Container)(({ theme }) => ({
+  width: "50%",
+  display: "flex",
+  backgroundColor: theme.palette.background.default,
+  maxHeight: "90%",
+  padding: "50px 10px",
+}));
+
+const Slide = ({ icon, title, desc, img }) => {
   return (
-    <Container maxWidth="xl"  sx={{width:'100vw',backgroundColor:'primary.main' }}>
-      <Container sx={{width:'50%', display:'flex', backgroundColor:'background.default', maxHeight:"100%", padding:"50px 10px"}}>
-        <Box sx={{flex:1}}>
+    <Container
+      maxWidth="xl"
+      sx={{ width: "100vw", backgroundColor: "primary.main" }}
+    >
+      <Grid
+        container
+        sx={{
+          width: "50%",
+          height: "100%",
+          margin:'auto',
+          backgroundColor: "background.default",
+          px:3,
+          py:2
+        }}
+      >
+        <Grid
+          container
+          item
+          xs={12}
+          md={4}
+          alignItems="center"
+          justifyContent="flex-start"
+          direction="column"
+        >
           <div>
             <h1>{title}</h1>
             <p>{desc}</p>
           </div>
-        </Box>
-        <Box sx={{flex:1}}>
+        </Grid>
+        <Grid
+          container
+          item
+          xs={12}
+          md={8}
+          alignItems="center"
+          justifyContent="center"
+          direction="column"
+        >
           <Img src={img} alt="" />
-        </Box>
-      </Container>
+        </Grid>
+      </Grid>
     </Container>
   );
 };
