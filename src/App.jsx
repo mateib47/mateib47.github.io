@@ -1,4 +1,4 @@
-import { Topbar, Menu, Sidebar, Home, Programming, PublicSpeak, Negotiation, Sports } from "./components";
+import { Topbar, Menu, Sidebar, Home, Programming, PublicSpeak, Negotiation, Sports, Entrepreneurship } from "./components";
 import "./app.scss";
 import { useState, useEffect } from "react";
 import {
@@ -70,6 +70,10 @@ const App = () => {
               <Route
                 path="/sports"
                 element={<Sports setItems={setItems} />}
+              />
+              <Route
+                path="/entrepreneurship"
+                element={<Entrepreneurship setItems={setItems} />}
               />
             </Routes>
           </Container>

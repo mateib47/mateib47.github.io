@@ -60,16 +60,16 @@ globalTheme = responsiveFontSizes(globalTheme);
       ...globalTheme,
       palette: {
         primary: {
-          main: "#FFFE00",
+          main: "#D17E13",
         },
         secondary: {
           main: "#2B94FF",
         },
         background: {
-          default: "#fff",
+          default: "#E6DDCB",
         },
         text: {
-          default: "#000",
+          default: "#819FA6",
         },
       },
     }),
