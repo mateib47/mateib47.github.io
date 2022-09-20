@@ -46,6 +46,7 @@ const Intro = () => {
         onChange={(isVisible) => {
           setShowPicture(isVisible);
         }}
+        minTopValue="1px"
       >
         <Grow in={showPicture} timeout={1000}>
           {picture}

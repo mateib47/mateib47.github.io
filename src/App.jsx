@@ -50,7 +50,7 @@ const App = () => {
           <Container
             className="sections"
             sx={{ backgroundColor: "background.default" }}
-            maxWidth="xl"
+            maxWidth={false}
           >
             <Routes>
               <Route path="/" element={<Navigate to="/home" />} />

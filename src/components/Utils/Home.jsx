@@ -7,6 +7,7 @@ import Container from "@mui/material/Container";
 import { styled } from "@mui/material/styles";
 import Grow from "@mui/material/Grow";
 import Slide from "@mui/material/Slide";
+import { CenteredGrid } from "./Utils";
 
 import { useState, useEffect } from "react";
 
@@ -27,15 +28,7 @@ const Home = ({ image, header, text }) => {
   return (
     <Box sx={{ flexGrow: 1 }} id="intro">
       <Grid container sx={{ width: "100%", height: "100%" }}>
-        <Grid
-          container
-          item
-          xs={12}
-          md={6}
-          alignItems="center"
-          justifyContent="center"
-          direction="column"
-        >
+        <CenteredGrid xs={12} md={6} container item>
           <Slide
             direction="right"
             in={checked}
@@ -55,17 +48,8 @@ const Home = ({ image, header, text }) => {
               <Img src={"assets/" + image} />
             </Container>
           </Slide>
-        </Grid>
-        <Grid
-          container
-          item
-          xs={12}
-          md={6}
-          alignItems="center"
-          justifyContent="center"
-          direction="column"
-          sx={{ paddingLeft: "0" }}
-        >
+        </CenteredGrid>
+        <CenteredGrid container item xs={12} md={6}  sx={{ paddingLeft: "0" }}>
           <Box
             sx={{
               width: "70%",
@@ -90,7 +74,7 @@ const Home = ({ image, header, text }) => {
               </Typography>
             </Grow>
           </Box>
-        </Grid>
+        </CenteredGrid>
       </Grid>
     </Box>
   );
