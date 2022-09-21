@@ -3,9 +3,10 @@ import About from './About/About'
 import Contact from './Contact/Contact'
 import Intro from './Intro/Intro'
 import Testimonials from './Testimonials/Testimonials'
-import Works from './Works/Works'
+import { worksList } from '../../data'
 import { useEffect } from 'react'
 import Experience from './Experience/Experience'
+import Carousel from '../Utils/Carousel/Carousel'
 
 const Home = ({setItems}) => {
 useEffect(() => {
@@ -18,8 +19,8 @@ useEffect(() => {
         <Intro />
         <About />
         <Experience/>
-        <Works />
-        <Testimonials />
+        <Carousel list = {worksList} />
+        {/* <Testimonials /> */}
         <Contact />
     </>
   )

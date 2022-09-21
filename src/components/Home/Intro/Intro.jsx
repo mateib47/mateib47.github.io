@@ -59,10 +59,10 @@ const Intro = () => {
           <h3>
             {person.status} <span ref={textRef}></span>
           </h3>
+          <a href="#about">
+            <img src="assets/down.png" alt="Down arrow" />
+            </a>
         </div>
-        <a href="#about">
-          <img src="assets/down.png" alt="Down arrow" />
-        </a>
       </div>
     </div>
   );

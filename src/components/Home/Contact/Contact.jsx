@@ -1,29 +1,37 @@
-import './contact.scss'
-import { useState } from 'react'
+import "./contact.scss";
+import { useState } from "react";
+import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
 
 const Contact = () => {
-  const [message, setMessage] = useState(false)
+  const [message, setMessage] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     setMessage(true);
-  }
+  };
 
   return (
-    <div className='contact' id='contact'>
+    <div className="contact" id="contact">
       <div className="left">
-        <img src="https://www.insidehighered.com/sites/default/server_files/media/barber%20handshake.jpg" alt="" />
+        <lord-icon
+          src="https://cdn.lordicon.com/kjkiqtxg.json"
+          trigger="boomerang"
+          style={{ width: "100%", height: "100%" }}
+        ></lord-icon>
       </div>
       <div className="right">
-        <h1>Contact.</h1>
+        <Typography variant="h2" sx={{ fontWeight: "600" }}>
+          Get in touch
+        </Typography>
         <form action="" onSubmit={handleSubmit}>
-          <input type="text" placeholder='Email' />
-          <textarea name="" id="" cols="30" rows="10" placeholder='Message'></textarea>
-          <button type='submit'>Send</button>
+          <TextField label="Email" />
+          <TextField label="Message" multiline rows={8} maxRows={10} />
+          <button type="submit">Send</button>
           {message && <span>Thank you, I will reply soon!</span>}
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
