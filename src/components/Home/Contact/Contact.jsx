@@ -2,6 +2,9 @@ import "./contact.scss";
 import { useState } from "react";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import FormControlUnstyled from '@mui/base/FormControlUnstyled';
+
 
 const Contact = () => {
   const [message, setMessage] = useState(false);
@@ -24,9 +27,11 @@ const Contact = () => {
           Get in touch
         </Typography>
         <form action="" onSubmit={handleSubmit}>
-          <TextField label="Email" />
-          <TextField label="Message" multiline rows={8} maxRows={10} />
-          <button type="submit">Send</button>
+          <TextField label="Email" sx={{width:"80%"}} />
+          <TextField label="Message" multiline rows={8} maxRows={10} sx={{width:"80%"}} />
+          <Button variant="contained" color="primary" sx={{ px:3, py:1}}>
+            Send
+          </Button>
           {message && <span>Thank you, I will reply soon!</span>}
         </form>
       </div>

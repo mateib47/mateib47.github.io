@@ -8,22 +8,23 @@ import { styled } from "@mui/material/styles";
 
 const LArrow = styled("img")(({ theme }) => ({
   position: "absolute",
-  height: "50px",
+  height: "25px",
   cursor: "pointer",
-  left: "2%",
+  left: "1%",
   transform: "rotateY(180deg)",
   zIndex: 1,
   [theme.breakpoints.up("md")]: {
-    right: "10%",
+    height: "50px",
+    right: "400px",
   },
 }));
 const RArrow = styled("img")(({ theme }) => ({
   position: "absolute",
-  height: "50px",
+  height: "25px",
   cursor: "pointer",
-  right: "2%",
+  right: "1%",
   [theme.breakpoints.up("md")]: {
-    right: "10%",
+    height: "50px",
   },
 }));
 

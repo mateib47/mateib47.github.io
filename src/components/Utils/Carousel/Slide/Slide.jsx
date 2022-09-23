@@ -2,20 +2,30 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import Typography from '@mui/material/Typography'
+
+
 
 const Img = styled("img")({
   margin: "auto",
   display: "block",
   maxWidth: "100%",
-  maxHeight: "80%",
+  maxHeight: "90%",
+  marginTop: "20px",
 });
 
-const MyContainer = styled(Container)(({ theme }) => ({
-  width: "50%",
-  display: "flex",
+const MyGrid = styled(Grid)(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
-  maxHeight: "90%",
-  padding: "50px 10px",
+  width: "90%",
+  height: "100%",
+  margin: "auto",
+  padding: "10px 30px",
+  borderRadius: "10px",
+  overflow: "hidden",
+  [theme.breakpoints.up("md")]: {
+    width: "50%",
+  },
 }));
 
 const Slide = ({ icon, title, desc, img }) => {
@@ -24,17 +34,7 @@ const Slide = ({ icon, title, desc, img }) => {
       maxWidth="xl"
       sx={{ width: "100vw", backgroundColor: "primary.main" }}
     >
-      <Grid
-        container
-        sx={{
-          width: "50%",
-          height: "100%",
-          margin:'auto',
-          backgroundColor: "background.default",
-          px:3,
-          py:2
-        }}
-      >
+      <MyGrid container sx={{ boxShadow: 2 }}>
         <Grid
           container
           item
@@ -45,8 +45,8 @@ const Slide = ({ icon, title, desc, img }) => {
           direction="column"
         >
           <div>
-            <h1>{title}</h1>
-            <p>{desc}</p>
+            <Typography variant="h2">{title}</Typography>
+            <Typography variant="body1">{desc}</Typography>
           </div>
         </Grid>
         <Grid
@@ -60,7 +60,7 @@ const Slide = ({ icon, title, desc, img }) => {
         >
           <Img src={img} alt="" />
         </Grid>
-      </Grid>
+      </MyGrid>
     </Container>
   );
 };
