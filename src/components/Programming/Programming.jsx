@@ -3,6 +3,7 @@ import Portofolio from "./Portofolio/Portofolio";
 import Languages from "./Languages/Languages";
 import { useEffect } from "react";
 import Home from "../Utils/Home";
+import Certifications from "./Certifications";
 
 const Programming = ({ setItems }) => {
   useEffect(() => {
@@ -20,6 +21,7 @@ const Programming = ({ setItems }) => {
       />
       <Languages />
       <Portofolio />
+      <Certifications />
     </>
   );
 };
