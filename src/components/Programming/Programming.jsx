@@ -3,7 +3,29 @@ import Portofolio from "./Portofolio/Portofolio";
 import Languages from "./Languages/Languages";
 import { useEffect } from "react";
 import Home from "../Utils/Home";
-import Certifications from "./Certifications";
+import HorizontalBars from "../Utils/HorizontalBars";
+
+const data = [
+  {
+    title: "Certification",
+    description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est doloribus voluptatum quidem expedita aliquid quae, eaque necessitatibus provident nobis dignissimos consequuntur? Doloremque suscipit ut magnam. Cum vitae eligendi quaerat dignissimos?
+`,
+    img: "globe.png",
+  },
+  {
+    title: "Certification",
+    description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est doloribus voluptatum quidem expedita aliquid quae, eaque necessitatibus provident nobis dignissimos consequuntur? Doloremque suscipit ut magnam. Cum vitae eligendi quaerat dignissimos?
+`,
+    img: "globe.png",
+  },
+  {
+    title: "Certification",
+    description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est doloribus voluptatum quidem expedita aliquid quae, eaque necessitatibus provident nobis dignissimos consequuntur? Doloremque suscipit ut magnam. Cum vitae eligendi quaerat dignissimos?
+`,
+    img: "globe.png",
+  },
+];
+
 
 const Programming = ({ setItems }) => {
   useEffect(() => {
@@ -21,7 +43,7 @@ const Programming = ({ setItems }) => {
       />
       <Languages />
       <Portofolio />
-      <Certifications />
+      <HorizontalBars data={data} />
     </>
   );
 };
