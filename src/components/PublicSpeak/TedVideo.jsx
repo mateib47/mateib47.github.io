@@ -1,6 +1,16 @@
 import React from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
+import { styled } from "@mui/material/styles";
+
+
+const Iframe = styled('iframe')(({ theme }) => ({
+  width:"400px",
+  [theme.breakpoints.up("md")]: {
+    width:"560px"
+
+  },
+}));
 
 const TedVideo = () => {
   return (
@@ -14,7 +24,7 @@ const TedVideo = () => {
       id="video"
     >
       <Grid item xs={8}>
-        <iframe
+        <Iframe
           width="560"
           height="315"
           src="https://www.youtube.com/embed/tudD4yemkYw"
@@ -22,7 +32,7 @@ const TedVideo = () => {
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-        ></iframe>
+        ></Iframe>
       </Grid>
     </Grid>
   );

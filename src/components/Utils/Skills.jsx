@@ -47,6 +47,7 @@ const Skills = ({ skills }) => {
                 ? skills.indexOf(x) * 200 + "ms"
                 : "1000ms",
             }}
+            minTopValue="1px"
           >
             <Grid item xs={12} md={4}>
               <Skill header={x.header} body={x.body} img={x.img} />
