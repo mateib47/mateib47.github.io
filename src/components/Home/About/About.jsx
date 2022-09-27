@@ -68,6 +68,7 @@ const About = () => {
                   variant="body2"
                   color="primary"
                   dangerouslySetInnerHTML={{ __html: description }}
+                  sx={{width:'70%', margin:'auto'}}
                 /> 
               </Grow>
             </VizSensor>
