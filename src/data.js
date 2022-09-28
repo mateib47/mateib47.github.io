@@ -34,6 +34,14 @@ export const siteModes = [
   "Public speaking",
   "Sports"
 ];
+export const siteModesRaw = [
+  "home",
+  "programming",
+  "negotiation",
+  "entrepreneurship",
+  "public%20speaking",
+  "sports"
+];
 
 export const projectsList = [
   {

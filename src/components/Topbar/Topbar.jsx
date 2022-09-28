@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import useTheme from "@mui/material/styles/useTheme";
 
-const Topbar = ({ open, setOpen, setTheme, theme }) => {
+const Topbar = ({ open, setOpen, theme }) => {
   const muiTheme = useTheme();
 
   return (
@@ -24,7 +24,7 @@ const Topbar = ({ open, setOpen, setTheme, theme }) => {
           </Typography>
         </div>
         <div className="center">
-          <Selector setTheme={setTheme} theme={theme} />
+          <Selector theme={theme} />
         </div>
         <div className="right">
           <Container className="hamburger" onClick={() => setOpen(!open)}>

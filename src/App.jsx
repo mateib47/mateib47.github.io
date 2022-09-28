@@ -1,4 +1,14 @@
-import { Topbar, Menu, Sidebar, Home, Programming, PublicSpeak, Negotiation, Sports, Entrepreneurship } from "./components";
+import {
+  Topbar,
+  Menu,
+  Sidebar,
+  Home,
+  Programming,
+  PublicSpeak,
+  Negotiation,
+  Sports,
+  Entrepreneurship,
+} from "./components";
 import "./app.scss";
 import { useState, useEffect } from "react";
 import {
@@ -7,13 +17,24 @@ import {
   Route,
   useRoutes,
   Navigate,
+  useLocation,
 } from "react-router-dom";
-import { createTheme, ThemeProvider, responsiveFontSizes  } from "@mui/material/styles";
+import {
+  createTheme,
+  ThemeProvider,
+  responsiveFontSizes,
+} from "@mui/material/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@mui/material/Container";
 import { themes } from "./themes";
+import { siteModesRaw } from "./data";
 
 const App = () => {
+  const { pathname, hash, key } = useLocation();
+  useEffect(() => {
+    setTheme(siteModesRaw.indexOf(pathname.slice(1)));
+  }, [pathname]);
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [items, setItems] = useState([
     "Home",
@@ -23,28 +44,15 @@ const App = () => {
     "Testimonials",
     "Contact",
   ]);
-  const [theme, _setTheme] = useState(0);
-  const setTheme = (theme) => {
-    localStorage.setItem("Theme", theme);
-    _setTheme(theme);
-  };
-
-  useEffect(() => {
-    let theme = localStorage.getItem("Theme");
-    if(theme){
-      _setTheme(theme)
-    }
-  }, []);
-
+  const [theme, setTheme] = useState(0);
 
   //update sections of topbar menu
   return (
-    <ThemeProvider theme={themes[theme]}>
-      <CssBaseline />
-
-      <Router>
+    <>
+      <ThemeProvider theme={themes[theme]}>
+        <CssBaseline />
         <div className="app">
-          <Topbar open={menuOpen} setOpen={setMenuOpen} setTheme={setTheme} theme={theme} />
+          <Topbar open={menuOpen} setOpen={setMenuOpen} theme={theme} />
           <Sidebar />
           <Menu open={menuOpen} setOpen={setMenuOpen} items={items} />
           <Container
@@ -67,10 +75,7 @@ const App = () => {
                 path="/negotiation"
                 element={<Negotiation setItems={setItems} />}
               />
-              <Route
-                path="/sports"
-                element={<Sports setItems={setItems} />}
-              />
+              <Route path="/sports" element={<Sports setItems={setItems} />} />
               <Route
                 path="/entrepreneurship"
                 element={<Entrepreneurship setItems={setItems} />}
@@ -78,8 +83,8 @@ const App = () => {
             </Routes>
           </Container>
         </div>
-      </Router>
-    </ThemeProvider>
+      </ThemeProvider>
+    </>
   );
 };
 

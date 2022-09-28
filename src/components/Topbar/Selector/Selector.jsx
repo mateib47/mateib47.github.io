@@ -13,18 +13,15 @@ import { Link } from "react-router-dom";
 import { siteModes } from "../../../data";
 import Typography from "@mui/material/Typography";
 
-const Selector = ({ theme, setTheme }) => {
+const Selector = ({theme}) => {
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
 
-  const handleClick = () => {
-    console.info(`You clicked ${siteModes[theme]}`);
-  };
+  
 
   const handleMenuItemClick = (event, index) => {
     console.log(siteModes[index]);
     setOpen(false);
-    setTheme(index);
   };
 
   const handleToggle = () => {
@@ -46,7 +43,7 @@ const Selector = ({ theme, setTheme }) => {
         ref={anchorRef}
         aria-label="split button"
       >
-        <Button onClick={handleClick}>{siteModes[theme] }</Button>
+        <Button >{siteModes[theme] }</Button>
         <Button
           size="small"
           aria-controls={open ? "split-button-menu" : undefined}
@@ -78,7 +75,7 @@ const Selector = ({ theme, setTheme }) => {
                 <MenuList id="split-button-menu" autoFocusItem>
                   {siteModes.map((option, index) => (
                     <Link
-                      to={"/" + option}
+                      to={"/" + option.toLowerCase()}
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
                       <MenuItem
