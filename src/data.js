@@ -1,6 +1,14 @@
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 import SchoolIcon from "@mui/icons-material/School";
 
+import javascript from "programming-languages-logos/src/javascript/javascript.svg";
+import java from "programming-languages-logos/src/java/java.png";
+import python from "programming-languages-logos/src/python/python.png";
+import cpp from "programming-languages-logos/src/cpp/cpp.png";
+import haskell from "programming-languages-logos/src/haskell/haskell.png";
+import html from "programming-languages-logos/src/html/html.png";
+import css from "programming-languages-logos/src/css/css.png";
+
 
 
 export async function fetchSectionList(setSections, setLoading, setSelected) {
@@ -188,6 +196,74 @@ export const person = {
   improving my web-development knowledge.`,
   boldedWords: ["University of Twente", "Honours", "web-development"],
 };
+
+export const heights = [
+  {
+    h: 140,
+    logo: java,
+    descr: "Used it a lot of diverse projects; OOP, Multithreading, Sockets",
+  },
+  { h: 90, logo: python, descr: "Know the basics but currently doing more" },
+  { h: 60, logo: cpp, descr: "Used for 4 years in high school" },
+  { h: 100, logo: haskell, descr: "I love this language" },
+  { h: 70, logo: html, descr: "Not really a programming language but yeah" },
+  {
+    h: 160,
+    logo: javascript,
+    descr: "Used for one year every day in a lot of projects",
+  },
+  { h: 90, logo: css, descr: "Know how to center a div:)" },
+  {
+    h: 80,
+    logo: "assets/languages/androidstudio.png",
+    descr: "Did couple of projects",
+  },
+  {
+    h: 70,
+    logo: "assets/languages/antlr.png",
+    descr: "Built my own programming language and compiler",
+  },
+  { h: 80, logo: "assets/languages/maven.png", descr: "Used it" },
+  {
+    h: 150,
+    logo: "assets/languages/react.png",
+    descr: "Used it a lot but still more to learn",
+  },
+  {
+    h: 100,
+    logo: "assets/languages/posgresql.png",
+    descr: "Used relational databases a lot both in high-school and uni",
+  },
+  {
+    h: 50,
+    logo: "assets/languages/prolog.png",
+    descr: "Used it in one project, not a big fan",
+  },
+  {
+    h: 50,
+    logo: "assets/languages/redux.png",
+    descr: "Know its purpose and how to use it in theory",
+  },
+  {
+    h: 70,
+    logo: "assets/languages/rust.png",
+    descr: "Know just basic principles",
+  },
+  {
+    h: 90,
+    logo: "assets/languages/springboot.png",
+    descr: "My go-to framework for backend",
+  },
+  {
+    h: 110,
+    logo: "assets/languages/sass.png",
+    descr: "Got used to this instead of css",
+  },{
+    h: 130,
+    logo: "assets/languages/mui.png",
+    descr: "My go-to library for UI, started to like it a lot",
+  },
+];
 
 export const experience = [
   {

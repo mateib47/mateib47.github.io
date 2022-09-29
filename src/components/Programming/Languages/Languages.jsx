@@ -13,16 +13,14 @@ import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import Masonry from "@mui/lab/Masonry";
 import Container from "@mui/material/Container";
-import javascript from "programming-languages-logos/src/javascript/javascript.svg";
-import java from "programming-languages-logos/src/java/java.png";
 import { useTheme } from "@mui/material/styles";
+import Tooltip from "@mui/material/Tooltip";
+import { heights } from "../../../data";
 
 //TODO add all logos
 
 const Languages = () => {
   const theme = useTheme();
-
-  const heights = [150, 90, 70, 110, 150, 130, 80, 50, 90, 100, 150, 50, 80];
 
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: "#fff",
@@ -34,8 +32,8 @@ const Languages = () => {
 
   const MyBox = styled(Box)(({ theme }) => ({
     width: "90%",
-    margin:'auto',
-    height:'80%',
+    margin: "auto",
+    height: "80%",
     [theme.breakpoints.up("md")]: {
       width: "70%",
     },
@@ -43,16 +41,17 @@ const Languages = () => {
 
   return (
     <div className="languages" id="languages">
-      <MyBox
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Masonry columns={{xs:3,md:4}} spacing={2}>
-          {heights.map((height, index) => (
-            <Item key={index} sx={{ height, overflow: "hidden" }}>
-              <img src={java} style={{ height: "90%" }} />
-            </Item>
+      <Typography variant="h3" color="primary" align="center" sx={{m:2, overflow:"hidden", fontWeight:500}}>
+        Programming languages, frameworks and libraries
+      </Typography>
+      <MyBox display="flex" justifyContent="center" alignItems="center">
+        <Masonry columns={{ xs: 2, md: 4, lg: 5 }} spacing={2} sx={{my:2}}>
+          {heights.map((x, index) => (
+            <Tooltip title={x.descr}>
+              <Item key={index} sx={{ height: x.h, overflow: "hidden" }}>
+                <img src={x.logo} style={{ height: "90%" }} />
+              </Item>
+            </Tooltip>
           ))}
         </Masonry>
       </MyBox>
