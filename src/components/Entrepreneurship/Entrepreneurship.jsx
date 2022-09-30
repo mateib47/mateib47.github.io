@@ -10,7 +10,7 @@ const Entrepreneurship = ({ setItems }) => {
   return (
     <>
       <Home
-        image={"business_team.png"}
+        image={"honours2.png"}
         header="Student entrepreneur"
         text={
           `Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolores tempore quasi quos ea aliquid eveniet. Nulla inventore ducimus veniam expedita provident voluptate laborum sunt temporibus, excepturi doloremque, dolorem eius.`

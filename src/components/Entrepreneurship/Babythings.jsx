@@ -10,13 +10,37 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 
+
 const Img = styled("img")(({ theme }) => ({
   margin: 0,
   display: "block",
-  maxWidth: "100%",
-  maxHeight: "100%",
+  width: "80%",
+  height: "auto",
   borderRadius: "10px",
   backgroundColor: theme.palette.text.default,
+  [theme.breakpoints.up("md")]: {
+    maxWidth: "100%",
+    margin: "auto",
+
+  },
+}));
+const MyBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  flexDirection: "column",
+  [theme.breakpoints.up("md")]: {
+    flexDirection: "row",
+  },
+}));
+const MyTypography = styled(Typography)(({ theme }) => ({
+  fontWeight: 600,
+  width: "95%",
+  margin: "auto",
+  fontSize: "15px",
+  color: theme.palette.primary.main,
+  [theme.breakpoints.up("md")]: {
+    width: "60%",
+  },
 }));
 
 const tasks = [
@@ -31,39 +55,31 @@ const tasks = [
 const Babythings = () => {
   return (
     <Container sx={{ display: "flex", flexDirection: "column" }} maxWidth="lg">
-      <Box
+      <MyBox
         sx={{
           flex: 1,
-          display: "flex",
-          justifyContent:"space-between",
-          alignItems: "center",
+          justifyContent: "space-between",
+          flexDirection: "row",
         }}
       >
-        <Img src="assets/business.PNG" />
-        <Typography
-          variant="h5"
-          align="center"
-          sx={{
-            fontWeight: 600,
-            width: "60%",
-            margin: "auto",
-            color: "primary.main",
-          }}
-        >
+        <Container sx={{width:"auto", height:"100%", flex:1, display:"flex", flexDirection:"column", justifyContent:"center", alignContent:"center"}}>
+          <Img src="assets/business2.PNG" />
+          <Typography variant="h6" align="center" sx={{overflow:"hidden"}}>Babythings</Typography>
+          <Typography variant="body1" align="center" sx={{overflow:"hidden"}}>Sep 2021 - Jul 2022</Typography>
+        </Container>
+        <MyTypography variant="h5" align="center" sx={{flex:3}}>
           As a CTO and co-founder, I had to assist the team in business
           development and market research while developing the website of the
           store
-        </Typography>
-      </Box>
-      <Box
+        </MyTypography>
+      </MyBox>
+      <MyBox
         sx={{
           flex: 3,
-          display: "flex",
           justifyContent: "center",
-          alignItems: "center",
         }}
       >
-        <List>
+        <List dense={true}>
           {tasks.map((x) => (
             <ListItem>
               <ListItemIcon>
@@ -74,7 +90,7 @@ const Babythings = () => {
           ))}
         </List>
         <Img src="assets/business_team.png" />
-      </Box>
+      </MyBox>
     </Container>
   );
 };
