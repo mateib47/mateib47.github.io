@@ -14,7 +14,7 @@ import { CenteredGrid } from "../../Utils/Utils";
 import VizSensor from "react-visibility-sensor";
 
 const About = () => {
-  const [description, setDescription] = useState();
+  const [description, setDescription] = useState([]);
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -22,14 +22,19 @@ const About = () => {
   }, []);
 
   const createDescription = () => {
-    let s = person.description;
+    let descr = [];      
     let w = person.boldedWords;
-    for (let i = 0; i < w.length; i++) {
-      let word = w[i];
-      let regex = new RegExp(w[i], "g");
-      s = s.replace(regex, word.bold());
+
+    for (let d of person.description) {
+      for (let i = 0; i < w.length; i++) {
+        let word = w[i];
+        let regex = new RegExp(w[i], "g");
+        d = d.replace(regex, word.bold());
+      }
+      descr.push(d)
     }
-    return s;
+    console.log(descr)
+    return descr;
   };
 
   const options = {
@@ -39,7 +44,6 @@ const About = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }} id="intro">
-      
       <Grid container sx={{ width: "100%", height: "100%" }}>
         <CenteredGrid container item xs={12} md={6}>
           <Box
@@ -48,30 +52,27 @@ const About = () => {
             }}
           >
             <Typography
-                variant="h3"
-                color="primary"
-                sx={{ overflow: "hidden", fontWeight: "600", textAlign:"center" }}
-              >
-                About Me
-              </Typography>
-            <VizSensor
-              onChange={(isVisible) => {
-                setShow(isVisible);
+              variant="h3"
+              color="primary"
+              sx={{
+                overflow: "hidden",
+                fontWeight: "600",
+                textAlign: "center",
               }}
             >
-              <Grow
-                in={show}
-                style={{ transformOrigin: "0 0 0" }}
-                {...(show ? { timeout: 3000 } : {})}
-              >
-                <Typography
-                  variant="body2"
-                  color="primary"
-                  dangerouslySetInnerHTML={{ __html: description }}
-                  sx={{width:'70%', margin:'auto'}}
-                /> 
-              </Grow>
-            </VizSensor>
+              About Me
+            </Typography>
+           
+                {description.map((x) => (
+                  <Typography
+                    variant="body2"
+                    color="primary"
+                    paragraph={true}
+                    align="center"
+                    dangerouslySetInnerHTML={{ __html: x }}
+                  />
+                ))}
+  
           </Box>
         </CenteredGrid>
         <CenteredGrid xs={12} md={6} container item>
@@ -83,10 +84,7 @@ const About = () => {
               display: "block",
             }}
           >
-            <ReactWordcloud
-              words={person.wordCloud}
-              options={options}
-            />
+            <ReactWordcloud words={person.wordCloud} options={options} />
           </Container>
         </CenteredGrid>
       </Grid>
