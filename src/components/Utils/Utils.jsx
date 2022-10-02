@@ -14,3 +14,11 @@ export const CenteredGrid = styled(Grid)(({ theme }) => ({
   justifyContent: "center",
   direction: "column",
 }));
+
+export const Iframe = styled('iframe')(({ theme }) => ({
+  width:"400px",
+  [theme.breakpoints.up("md")]: {
+    width:"560px"
+
+  },
+}));

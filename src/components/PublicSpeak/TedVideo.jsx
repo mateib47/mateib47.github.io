@@ -2,15 +2,9 @@ import React from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
+import { Iframe } from "../Utils/Utils";
 
 
-const Iframe = styled('iframe')(({ theme }) => ({
-  width:"400px",
-  [theme.breakpoints.up("md")]: {
-    width:"560px"
-
-  },
-}));
 
 const TedVideo = () => {
   return (
