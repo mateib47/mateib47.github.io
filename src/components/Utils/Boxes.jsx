@@ -23,7 +23,7 @@ const Img = styled("img")({
   borderRadius: "50%",
 });
 
-const Skills = ({ skills }) => {
+const Boxes = ({ items }) => {
   const [show, setShow] = useState(false);
 
   return (
@@ -39,18 +39,18 @@ const Skills = ({ skills }) => {
         justifyContent="center"
         sx={{ maxWidth: "80%", margin: "auto" }}
       >
-        {skills.map((x) => (
+        {items.map((x) => (
           <Zoom
             in={show}
             style={{
               transitionDelay: show
-                ? skills.indexOf(x) * 200 + "ms"
+                ? items.indexOf(x) * 200 + "ms"
                 : "1000ms",
             }}
             minTopValue="1px"
           >
             <Grid item xs={12} md={4}>
-              <Skill header={x.header} body={x.body} img={x.img} />
+              <MyCard header={x.header} body={x.body} img={x.img} />
             </Grid>
           </Zoom>
         ))}
@@ -59,7 +59,7 @@ const Skills = ({ skills }) => {
   );
 };
 
-const Skill = ({ img, header, body }) => {
+const MyCard = ({ img, header, body }) => {
   return (
     <Item>
       <Img src={"assets/" + img} />
@@ -77,4 +77,4 @@ const Skill = ({ img, header, body }) => {
   );
 };
 
-export default Skills;
+export default Boxes;

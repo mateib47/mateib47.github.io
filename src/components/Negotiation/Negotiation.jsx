@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import Home from "../Utils/Home";
-import Skills from "../Utils/Skills";
+import Boxes from "../Utils/Boxes";
 import Carousel from "../Utils/Carousel/Carousel";
 import Experience from "./Experience";
 
@@ -59,7 +59,7 @@ const Negotiation = ({ setItems }) => {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis maxime sunt labore tempora voluptate et nulla laboriosam sequi doloremque omnis, nemo deserunt ipsum facilis sapiente reiciendis! Nesciunt rerum tempore dolorem!"
         }
       />
-      <Skills skills={skills} />
+      <Boxes items={skills} />
       <Carousel list = {experience} />
     </>
   );
