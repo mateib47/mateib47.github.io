@@ -41,7 +41,7 @@ const Intro = () => {
   }, []);
 
   return (
-    <div className="intro" id="home">
+    <div className="intro" id="intro">
       <VizSensor
         onChange={(isVisible) => {
           setShowPicture(isVisible);

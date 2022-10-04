@@ -44,8 +44,8 @@ const Slide = ({ icon, title, desc, img }) => {
           justifyContent="flex-start"
           direction="column"
         >
-          <div>
-            <Typography variant="h2">{title}</Typography>
+          <div style={{width:"100%"}}>
+            <Typography variant="h4">{title}</Typography>
             <Typography variant="body1">{desc}</Typography>
           </div>
         </Grid>

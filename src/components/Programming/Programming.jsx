@@ -7,25 +7,23 @@ import HorizontalBars from "../Utils/HorizontalBars";
 
 const data = [
   {
-    title: "Certification",
-    description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est doloribus voluptatum quidem expedita aliquid quae, eaque necessitatibus provident nobis dignissimos consequuntur? Doloremque suscipit ut magnam. Cum vitae eligendi quaerat dignissimos?
-`,
-    img: "globe.png",
+    title: "Responsive Web Design",
+    description: `Learnt the languages that developers use to build webpages: HTML (Hypertext Markup Language) for content, and CSS (Cascading Style Sheets) for design. Learnt how to make webpages that respond to different screen sizes.`,
+    img: "fcc.png",
   },
   {
-    title: "Certification",
-    description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est doloribus voluptatum quidem expedita aliquid quae, eaque necessitatibus provident nobis dignissimos consequuntur? Doloremque suscipit ut magnam. Cum vitae eligendi quaerat dignissimos?
+    title: "JavaScript Algorithms and Data Structures",
+    description: `Learnt the fundamentals of JavaScript including variables, arrays, objects, loops, and functions. Applied that knowledge by creating algorithms to manipulate strings and factorialize numbers. Revised two important programming styles or paradigms: Object Oriented Programming (OOP) and Functional Programming (FP)
 `,
-    img: "globe.png",
+    img: "fcc.png",
   },
   {
-    title: "Certification",
-    description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est doloribus voluptatum quidem expedita aliquid quae, eaque necessitatibus provident nobis dignissimos consequuntur? Doloremque suscipit ut magnam. Cum vitae eligendi quaerat dignissimos?
+    title: "Front End Development Libraries",
+    description: `Learnt how to style quickly with Bootstrap. Learn how add logic to CSS styles and extend them with Sass. Learnt jQuery, React and Redux. Implemented five web applications using React.
 `,
-    img: "globe.png",
+    img: "fcc.png",
   },
 ];
-
 
 const Programming = ({ setItems }) => {
   useEffect(() => {
@@ -38,12 +36,12 @@ const Programming = ({ setItems }) => {
         image={"programming.png"}
         header="Web developer"
         text={
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolores tempore quasi quos ea aliquid eveniet. Nulla inventore ducimus veniam expedita provident voluptate laborum sunt temporibus, excepturi doloremque, dolorem eius."
+          "I love the challenge of building something from scratch and seeing it come to life on the screen. I also enjoy the satisfaction of solving problems and creating something that makes people's lives easier."
         }
       />
       <Languages />
       <Portofolio />
-      <HorizontalBars data={data} />
+      <HorizontalBars data={data} title="Certifications" />
     </>
   );
 };

@@ -37,11 +37,10 @@ const App = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [items, setItems] = useState([
-    "Home",
+    "Intro",
     "About",
-    "Portofolio",
-    "Works",
-    "Testimonials",
+    "Experience",
+    "Highlights",
     "Contact",
   ]);
   const [theme, setTheme] = useState(0);

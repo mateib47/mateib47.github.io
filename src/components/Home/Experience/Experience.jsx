@@ -44,7 +44,7 @@ const MyTimelineDot = styled(TimelineDot)(({ theme }) => ({
 
 const Experience = () => {
   return (
-    <div className="experience">
+    <div id="experience">
       <Timeline
         position="alternate"
         sx={{

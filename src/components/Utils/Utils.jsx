@@ -22,3 +22,10 @@ export const Iframe = styled('iframe')(({ theme }) => ({
 
   },
 }));
+
+export const Img = styled("img")({
+  margin: "auto",
+  display: "block",
+  maxWidth: "100%",
+  maxHeight: "100%",
+});

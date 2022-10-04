@@ -7,10 +7,11 @@ import { worksList } from '../../data'
 import { useEffect } from 'react'
 import Experience from './Experience/Experience'
 import Carousel from '../Utils/Carousel/Carousel'
+import RawStats from './RawStats'
 
 const Home = ({setItems}) => {
 useEffect(() => {
-  setItems(['Home', 'About','Experience', 'Works', 'Testimonials', 'Contact']);
+  setItems(['Intro', 'About','Experience', 'Highlights', 'Contact']);
 }, [])
 
 
@@ -19,8 +20,9 @@ useEffect(() => {
         <Intro />
         <About />
         <Experience/>
-        <Carousel list = {worksList} />
+        <Carousel id="highlights" list = {worksList} />
         {/* <Testimonials /> */}
+        {/* <RawStats /> */}
         <Contact />
     </>
   )

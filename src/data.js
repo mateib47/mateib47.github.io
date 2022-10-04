@@ -97,24 +97,21 @@ export const sectionsList = ["Featured", "Featured2", "Featured3"];
 export const worksList = [
   {
     id: 1,
-    icon: "./assets/globe.png",
-    title: "Title",
-    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repellat eos similique inventore quod est id odit, saepe impedit, dignissimos dolore architecto!",
-    img: "http://mateibucur.me/images/documentation-page.png",
+    title: "Multicultural",
+    desc: "Having lived on two continents allows me to see the world from different perspectives. It has taught me to be more open-minded and how to adapt successfully to any environment.",
+    img: "./assets/map.png",
   },
   {
     id: 2,
-    icon: "./assets/mobile.png",
-    title: "Title1",
-    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repellat eos similique inventore quod est id odit, saepe impedit, dignissimos dolore architecto!",
-    img: "http://mateibucur.me/images/tribute-page.png",
+    title: "Adventurous",
+    desc: "I like to try new things and I am always up for a challenge. I feel alive when I am doing something new and challenging. I like to push myself outside of my comfort zone and see what I am capable of.",
+    img: "./assets/twente.png",
   },
   {
     id: 3,
-    icon: "./assets/writing.png",
-    title: "Title2",
-    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repellat eos similique inventore quod est id odit, saepe impedit, dignissimos dolore architecto!",
-    img: "http://mateibucur.me/images/survey.png",
+    title: "Explorer",
+    desc: "For me, it is the lure of adventure and the unknown that is most appealing. I always wanted to find out what else is out there, beyond my everyday experiences.",
+    img: "./assets/postech.png",
   },
 ];
 

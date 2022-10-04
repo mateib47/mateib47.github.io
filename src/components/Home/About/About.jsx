@@ -13,6 +13,8 @@ import Slide from "@mui/material/Slide";
 import { CenteredGrid } from "../../Utils/Utils";
 import VizSensor from "react-visibility-sensor";
 
+import { Img } from "../../Utils/Utils";
+
 const About = () => {
   const [description, setDescription] = useState([]);
   const [show, setShow] = useState(false);
@@ -22,7 +24,7 @@ const About = () => {
   }, []);
 
   const createDescription = () => {
-    let descr = [];      
+    let descr = [];
     let w = person.boldedWords;
 
     for (let d of person.description) {
@@ -31,9 +33,9 @@ const About = () => {
         let regex = new RegExp(w[i], "g");
         d = d.replace(regex, word.bold());
       }
-      descr.push(d)
+      descr.push(d);
     }
-    console.log(descr)
+    console.log(descr);
     return descr;
   };
 
@@ -43,12 +45,12 @@ const About = () => {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }} id="intro">
+    <Box sx={{ flexGrow: 1 }} id="about">
       <Grid container sx={{ width: "100%", height: "100%" }}>
         <CenteredGrid container item xs={12} md={6}>
           <Box
             sx={{
-              width: "90%",
+              width: "80%",
             }}
           >
             <Typography
@@ -62,17 +64,15 @@ const About = () => {
             >
               About Me
             </Typography>
-           
-                {description.map((x) => (
-                  <Typography
-                    variant="body2"
-                    color="primary"
-                    paragraph={true}
-                    align="center"
-                    dangerouslySetInnerHTML={{ __html: x }}
-                  />
-                ))}
-  
+            {description.map((x) => (
+              <Typography
+                variant="body2"
+                color="primary"
+                paragraph={true}
+                align="center"
+                dangerouslySetInnerHTML={{ __html: x }}
+              />
+            ))}
           </Box>
         </CenteredGrid>
         <CenteredGrid xs={12} md={6} container item>
