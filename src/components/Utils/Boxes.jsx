@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import Zoom from "@mui/material/Zoom";
 import VizSensor from "react-visibility-sensor";
+import { CenteredGrid } from "./Utils";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -27,35 +28,45 @@ const Boxes = ({ items }) => {
   const [show, setShow] = useState(false);
 
   return (
-    <VizSensor
-      onChange={(isVisible) => {
-        setShow(isVisible);
-      }}
-    >
-      <Grid
-        container
-        spacing={2}
-        alignItems="center"
-        justifyContent="center"
-        sx={{ maxWidth: "80%", margin: "auto" }}
+    <Box sx={{ display: "flex" }}>
+      <VizSensor
+        onChange={(isVisible) => {
+          setShow(isVisible);
+        }}
+        partialVisibility
+        offset={{ top: 100 }}
       >
-        {items.map((x) => (
-          <Zoom
-            in={show}
-            style={{
-              transitionDelay: show
-                ? items.indexOf(x) * 200 + "ms"
-                : "1000ms",
-            }}
-            minTopValue="1px"
-          >
-            <Grid item xs={12} md={4}>
-              <MyCard header={x.header} body={x.body} img={x.img} />
-            </Grid>
-          </Zoom>
-        ))}
-      </Grid>
-    </VizSensor>
+        <Grid
+          container
+          spacing={4}
+          alignItems="stretch"
+          justifyContent="space-evenly"
+          sx={{ maxWidth: "80%", margin: "auto" }}
+        >
+          {items.map((x) => (
+            <Zoom
+              in={show}
+              style={{
+                transitionDelay: show
+                  ? items.indexOf(x) * 200 + "ms"
+                  : "1000ms",
+              }}
+            >
+              <Grid
+                item
+                xs={12}
+                md={4}
+                lg={3}
+                style={{ display: "flex", height: "auto" }}
+                align
+              >
+                <MyCard header={x.header} body={x.body} img={x.img} />
+              </Grid>
+            </Zoom>
+          ))}
+        </Grid>
+      </VizSensor>
+    </Box>
   );
 };
 

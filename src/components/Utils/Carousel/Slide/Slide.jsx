@@ -3,9 +3,7 @@ import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
-import Typography from '@mui/material/Typography'
-
-
+import Typography from "@mui/material/Typography";
 
 const Img = styled("img")({
   margin: "auto",
@@ -23,7 +21,7 @@ const MyGrid = styled(Grid)(({ theme }) => ({
   padding: "10px 30px",
   borderRadius: "10px",
   overflow: "hidden",
-  [theme.breakpoints.up("md")]: {
+  [theme.breakpoints.up("lg")]: {
     width: "50%",
   },
 }));
@@ -44,7 +42,7 @@ const Slide = ({ icon, title, desc, img }) => {
           justifyContent="flex-start"
           direction="column"
         >
-          <div style={{width:"100%"}}>
+          <div style={{ width: "100%", marginTop: "20px" }}>
             <Typography variant="h4">{title}</Typography>
             <Typography variant="body1">{desc}</Typography>
           </div>

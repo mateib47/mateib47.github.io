@@ -7,39 +7,41 @@ import Experience from "./Experience";
 
 const skills = [
   {
-    header: "Cross-cultural negotiations",
+    header: "Win-win mindset",
     img: "globe.png",
-    body: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio at voluptatibus tempora doloremque repellat eligendi autem labore esse, ipsum nobis repudiandae non eos tenetur nostrum adipisci officiis error, exercitationem asperiores",
+    body: "Entering into negotiations with the goal of finding a solution that is mutually beneficial for both parties involved",
   },
   {
-    header: "Cross-cultural negotiations",
+    header: "Active listening",
     img: "globe.png",
-    body: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio at voluptatibus tempora doloremque repellat eligendi autem labore esse, ipsum nobis repudiandae non eos tenetur nostrum adipisci officiis error, exercitationem asperiores",
+    body: "Paying close attention to the other party in order to fully understand their position, needs and underlying interests. This is achieved using techniques like mirroring, the use of calibrated questions and minimal encouragements.",
   },
   {
-    header: "Cross-cultural negotiations",
+    header: "Negotiation intelligence",
     img: "globe.png",
-    body: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio at voluptatibus tempora doloremque repellat eligendi autem labore esse, ipsum nobis repudiandae non eos tenetur nostrum adipisci officiis error, exercitationem asperiores",
+    body: "Clear understanding of myself and my partner’s interests and options. Setting up a clear strategy and plan for achieving my negotiation objectives. ",
+  },
+  {
+    header: "Negotiation intelligence",
+    img: "globe.png",
+    body: "Clear understanding of myself and my partner’s interests and options. Setting up a clear strategy and plan for achieving my negotiation objectives. ",
   },
 ];
 const experience = [
   {
     id: 1,
-    icon: "./assets/globe.png",
-    title: "Title",
-    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repellat eos similique inventore quod est id odit, saepe impedit, dignissimos dolore architecto!",
-    img: "http://mateibucur.me/images/documentation-page.png",
+    title: "NPT Graduate",
+    desc: "Built a broad understanding of the negotiation process by attending all the theoretical sessions, reading recommended books and participating in countless case simulations.",
+    img: "assets/npt_grad.jpeg",
   },
   {
     id: 2,
-    icon: "./assets/mobile.png",
-    title: "Title1",
+    title: "Wnr Finalist",
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repellat eos similique inventore quod est id odit, saepe impedit, dignissimos dolore architecto!",
-    img: "http://mateibucur.me/images/tribute-page.png",
+    img: "assets/wnr.png",
   },
   {
     id: 3,
-    icon: "./assets/writing.png",
     title: "Title2",
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repellat eos similique inventore quod est id odit, saepe impedit, dignissimos dolore architecto!",
     img: "http://mateibucur.me/images/survey.png",
@@ -56,11 +58,11 @@ const Negotiation = ({ setItems }) => {
         image={"negotiation.png"}
         header="International negotiator"
         text={
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis maxime sunt labore tempora voluptate et nulla laboriosam sequi doloremque omnis, nemo deserunt ipsum facilis sapiente reiciendis! Nesciunt rerum tempore dolorem!"
+          "I enjoy the challenge of finding creative solutions to complex problems. I thrive on the opportunity to build relationships and trust with people from all walks of life, and I firmly believe that communication and collaboration are the key when it comes to creating mutually beneficial deals."
         }
       />
       <Boxes items={skills} />
-      <Carousel list = {experience} />
+      <Carousel list={experience} />
     </>
   );
 };
