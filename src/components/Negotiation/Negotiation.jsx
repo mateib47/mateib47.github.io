@@ -37,14 +37,8 @@ const experience = [
   {
     id: 2,
     title: "Wnr Finalist",
-    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repellat eos similique inventore quod est id odit, saepe impedit, dignissimos dolore architecto!",
+    desc: "I took part in one of the largest negotiation competition for students. Despite of having a poor performance in the second round, my team and I managed to comeback and rank 1st in the last 2 rounds. Finally, we won The most Cooperative Team award and got the 4th place.",
     img: "assets/wnr.png",
-  },
-  {
-    id: 3,
-    title: "Title2",
-    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repellat eos similique inventore quod est id odit, saepe impedit, dignissimos dolore architecto!",
-    img: "http://mateibucur.me/images/survey.png",
   },
 ];
 

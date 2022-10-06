@@ -7,6 +7,17 @@ import Container from "@mui/material/Container";
 import { Iframe } from "../Utils/Utils";
 import { CenteredGrid } from "../Utils/Utils";
 import Grid from "@mui/material/Grid";
+import { styled } from "@mui/material/styles";
+
+
+
+const MyTypography = styled(Typography)(({ theme }) => ({
+  width: "95%",
+  color: theme.palette.primary.main,
+  [theme.breakpoints.up("md")]: {
+    width: "70%",
+  },
+}));
 
 const Running = () => {
   const [time, setTime] = useState([]);
@@ -40,18 +51,34 @@ const Running = () => {
 
   return (
     <Container maxWidth="xl">
-
       <Grid container sx={{ width: "100%", height: "100%" }}>
-        <CenteredGrid xs={12} md={6} container item sx={{ flexDirection: "column"}}>
-          <Typography variant="h5" color="initial">
-            Running stats
+        <CenteredGrid
+          xs={12}
+          md={6}
+          container
+          item
+          sx={{ flexDirection: "column" }}
+        >
+          <Typography variant="h2" color="primary" sx={{ fontWeight: "600", width:"70%" }} align="left">
+            Running
           </Typography>
-          <LineChart width={400} height={400} data={distance}>
+          <MyTypography variant="body1" color="primary">
+            I run because it makes me feel alive. The fresh air, the endorphins,
+            the feeling of my heart pumping and my lungs working--it's all
+            invigorating and empowering. I also run because it requires mental
+            toughness. Every time I lace up my shoes and head out the door, I
+            know I'm going to have to push myself physically and mentally. I
+            might get tired, I might want to give up, but I never do. Why?
+            Because I know that running makes me stronger, both physically and
+            mentally. It makes me better able to handle whatever life throws my
+            way.
+          </MyTypography>
+          {/* <LineChart width={400} height={400} data={distance}>
             <Line type="monotone" dataKey="uv" stroke="#000" />
           </LineChart>
           <Typography variant="h6" color="initial">
             {total.distance} km
-          </Typography>
+          </Typography> */}
         </CenteredGrid>
         <CenteredGrid
           container

@@ -50,13 +50,12 @@ const Story = () => {
           </Grid>
           <Grid item>
             <Typography variant="body1" color="initial">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nam
-              dolor ducimus animi, eligendi eius ex, consequatur explicabo
-              adipisci aliquam soluta mollitia, quo blanditiis? Nam, minus
-              officia! Sed, mollitia accusamus! Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Porro deleniti fuga in rerum soluta
-              illo itaque explicabo, expedita nam, animi natus consectetur
-              facere ex deserunt dolor consequatur qui autem aperiam.
+              I was always scared of public speaking, but I decided that I
+              wanted to become a TED speaker because I wanted to share my story
+              with the world. I knew that if I could overcome my fear of public
+              speaking, I could inspire others to do the same. I went through all the steps of selection received professional coaching.
+              I practiced like crazy, I was rehearsing my speech during lunch breaks, while running and even swimming. Eventually, I built up the confidence to
+              speak in front of large audiences.
             </Typography>
           </Grid>
         </Grid>
@@ -65,4 +64,5 @@ const Story = () => {
   );
 };
 
+//TODO improve the text
 export default Story;

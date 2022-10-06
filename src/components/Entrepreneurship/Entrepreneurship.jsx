@@ -46,7 +46,7 @@ const Entrepreneurship = ({ setItems }) => {
       <Home
         image={"honours2.png"}
         header="Student entrepreneur"
-        text={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolores tempore quasi quos ea aliquid eveniet. Nulla inventore ducimus veniam expedita provident voluptate laborum sunt temporibus, excepturi doloremque, dolorem eius.`}
+        text={`I have always been driven to start my own businesses. I believe that being a entrepreneur allows me to have a greater impact on the world. I am able to use my knowledge and skills to create products and services that make a difference in people's lives.`}
       />
       <Boxes items={items} />
       <InfoDisplay
