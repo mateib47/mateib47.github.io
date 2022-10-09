@@ -42,16 +42,23 @@ const MyTimelineDot = styled(TimelineDot)(({ theme }) => ({
   textAlign: "center",
 }));
 
+const RespTimeline = styled(Timeline)(({ theme }) => ({
+  padding:0,
+  [theme.breakpoints.up("md")]: {
+    padding:"16px"
+  },
+}));
+
 const Experience = () => {
   return (
     <div id="experience">
-      <Timeline
+      <RespTimeline
         position="alternate"
         sx={{
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          alignItems: "center",
+          alignItems: "stretch",
         }}
       >
         {experience.map((x) => (
@@ -63,7 +70,7 @@ const Experience = () => {
             iconComponent={x.iconComponent}
           />
         ))}
-      </Timeline>
+      </RespTimeline>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import FormControlUnstyled from '@mui/base/FormControlUnstyled';
+import Box from '@mui/material/Box'
 
 
 const Contact = () => {
@@ -23,7 +24,7 @@ const Contact = () => {
         ></lord-icon>
       </div>
       <div className="right">
-        <Typography variant="h2" sx={{ fontWeight: "600" }}>
+        <Typography variant="h4" sx={{ fontWeight: "600", overflow:"hidden" }}>
           Get in touch
         </Typography>
         <form action="" onSubmit={handleSubmit}>

@@ -1,5 +1,6 @@
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 import SchoolIcon from "@mui/icons-material/School";
+import HandshakeIcon from '@mui/icons-material/Handshake';
 
 import javascript from "programming-languages-logos/src/javascript/javascript.svg";
 import java from "programming-languages-logos/src/java/java.png";
@@ -279,8 +280,15 @@ export const experience = [
     iconComponent: <DeveloperModeIcon />,
   },
   {
+    title: "Negotiation Project Twente",
+    description: "Participant & Representative",
+    date: "Oct 2021 - May 2022",
+    color: "text.primary",
+    iconComponent: <HandshakeIcon />,
+  },
+  {
     title: "University of Twente",
-    description: "Bsc Technical Computer Science",
+    description: "Bsc Technical Computer Science & Honours in Business and Entrepreneurship",
     date: "2020 - 2023",
     color: "text.primary",
     iconComponent: <SchoolIcon />,
