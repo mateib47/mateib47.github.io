@@ -1,5 +1,5 @@
-import "./portofolio.scss";
-import PortfolioList from "./PortofolioList/PortfolioList";
+import "./portfolio.scss";
+import PortfolioList from "./PortfolioList/PortfolioList";
 import Project from "./Project/Project";
 import { useState } from "react";
 import {
@@ -14,7 +14,7 @@ import ProjectExtended from "./ProjectExtended/ProjectExtended";
 import Zoom from "@mui/material/Zoom";
 import Typography from "@mui/material/Typography";
 
-const Portofolio = () => {
+const Portfolio = () => {
   const [selected, setSelected] = useState("");
   const [data, setData] = useState([]);
   const [sections, setSections] = useState([]);
@@ -36,10 +36,10 @@ const Portofolio = () => {
   // }, [projectDisplay]);
 
   return (
-    <div className="portofolio" id="portofolio">
+    <div className="portfolio" id="portfolio">
       <div className="top">
         <Typography variant="h1" color="text.default">
-          Portofolio
+          Portfolio
         </Typography>
         <ul>
           {!sectLoading ? (
@@ -104,4 +104,4 @@ const Portofolio = () => {
   );
 };
 
-export default Portofolio;
+export default Portfolio;

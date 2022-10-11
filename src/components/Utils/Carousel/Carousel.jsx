@@ -47,7 +47,7 @@ const MyBox = styled(Box)(({ theme }) => ({
   margin: "auto",
 }));
 
-const Carousel = ({ list }) => {
+const Carousel = ({id, list }) => {
   const length = list.length;
   const [current, setCurrent] = useState(0);
   const handleClick = (way) => {
@@ -57,7 +57,7 @@ const Carousel = ({ list }) => {
   };
 
   return (
-    <MyBox maxWidth="xl" id="works" justifyContent="center" alignItems="center">
+    <MyBox id={id} maxWidth="xl" justifyContent="center" alignItems="center">
       <LArrow
         src="assets/arrow.png"
         alt=""

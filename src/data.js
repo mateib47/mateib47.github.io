@@ -137,11 +137,76 @@ export const testimonialsList = [
   },
 ];
 
+export const certifications = [
+  {
+    title: "Responsive Web Design",
+    description: `Learnt the languages that developers use to build webpages: HTML (Hypertext Markup Language) for content, and CSS (Cascading Style Sheets) for design. Learnt how to make webpages that respond to different screen sizes.`,
+    img: "fcc.png",
+  },
+  {
+    title: "JavaScript Algorithms and Data Structures",
+    description: `Learnt the fundamentals of JavaScript including variables, arrays, objects, loops, and functions. Applied that knowledge by creating algorithms to manipulate strings and factorialize numbers. Revised two important programming styles or paradigms: Object Oriented Programming (OOP) and Functional Programming (FP)
+`,
+    img: "fcc.png",
+  },
+  {
+    title: "Front End Development Libraries",
+    description: `Learnt how to style quickly with Bootstrap. Learn how add logic to CSS styles and extend them with Sass. Learnt jQuery, React and Redux. Implemented five web applications using React.
+`,
+    img: "fcc.png",
+  },
+];
+
+//NEGOTIATION
+
+export const negSkills = [
+  {
+    header: "Win-win mindset",
+    img: "winwin.png",
+    body: "Entering into negotiations with the goal of finding a solution that is mutually beneficial for both parties involved",
+  },
+  {
+    header: "Active listening",
+    img: "listen.png",
+    body: "Paying close attention to the other party in order to fully understand their position, needs and underlying interests. This is achieved using techniques like mirroring, the use of calibrated questions and minimal encouragements.",
+  },
+  {
+    header: "Negotiation intelligence",
+    img: "intelligence.png",
+    body: "Clear understanding of myself and my partner’s interests and options. Setting up a clear strategy and plan for achieving my negotiation objectives. Knowledge of negotiation jargon and techniques. ",
+  },
+  {
+    header: "Self assessment",
+    img: "reflection.png",
+    body: "Reflecting allows me to see where I need to improve and also to be more mindful of my own actions and how they might affect the negotiation process.",
+  },
+];
+export const negExperience = [
+  {
+    id: 1,
+    title: "NPT Graduate",
+    desc: "Built a broad understanding of the negotiation process by attending all the theoretical sessions, reading recommended books and participating in countless case simulations.",
+    img: "assets/npt_grad.jpeg",
+  },
+  {
+    id: 2,
+    title: "Wnr Finalist",
+    desc: "I took part in one of the largest negotiation competition for students. Despite of having a poor performance in the second round, my team and I managed to comeback and rank 1st in the last 2 rounds. Finally, we won The most Cooperative Team award and got the 4th place.",
+    img: "assets/wnr.png",
+  },
+  {
+    id: 3,
+    title: "Wnr Finalist",
+    desc: "I took part in one of the largest negotiation competition for students. Despite of having a poor performance in the second round, my team and I managed to comeback and rank 1st in the last 2 rounds. Finally, we won The most Cooperative Team award and got the 4th place.",
+    img: "assets/wnr.png",
+  },
+];
+
 export const person = {
   name: "Matei Bucur",
   status: "Student",
   attributes: ["Web Developer", "Entrepreneur", "Negotiator"],
-  linkedIn: "",
+  linkedIn: "https://www.linkedin.com/in/matei-bucur-57a591207/",
   githubLink: "https://github.com/mateib47",
   wordCloud: [
     { text: "Negotiation", value: 190 },

@@ -21,9 +21,9 @@ const MyPaper = styled(Paper)(({ theme }) => ({
   },
 }));
 
-const HorizontalBars = ({ title, data }) => {
+const HorizontalBars = ({ id,title, data }) => {
   return (
-    <div>
+    <div id={id}>
       <Typography
         variant="h3"
         color="primary"

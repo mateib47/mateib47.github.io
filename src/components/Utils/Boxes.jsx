@@ -19,16 +19,16 @@ const Item = styled(Paper)(({ theme }) => ({
 const Img = styled("img")({
   margin: "auto",
   display: "block",
-  maxWidth: "20%",
+  maxWidth: "30%",
   maxHeight: "100%",
   borderRadius: "50%",
 });
 
-const Boxes = ({ items }) => {
+const Boxes = ({ id, items }) => {
   const [show, setShow] = useState(false);
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box id={id} sx={{ display: "flex" }}>
       <VizSensor
         onChange={(isVisible) => {
           setShow(isVisible);
@@ -73,7 +73,7 @@ const Boxes = ({ items }) => {
 const MyCard = ({ img, header, body }) => {
   return (
     <Item>
-      <Img src={"assets/" + img} />
+      <Img src={"assets/icons/" + img} />
       <Typography
         variant="h4"
         color="primary"
