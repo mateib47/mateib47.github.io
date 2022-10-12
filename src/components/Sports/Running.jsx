@@ -50,8 +50,7 @@ const Running = () => {
   };
 
   return (
-    <Container maxWidth="xl">
-      <Grid container sx={{ width: "100%", height: "100%" }}>
+      <Grid container sx={{ width: "100%", height: "100%", px:2}}>
         <CenteredGrid
           xs={12}
           md={6}
@@ -59,9 +58,9 @@ const Running = () => {
           item
           sx={{ flexDirection: "column" }}
         >
-          <Typography variant="h2" color="primary" sx={{ fontWeight: "600", width:"70%" }} align="left">
+          <MyTypography variant="h2" color="primary" sx={{ fontWeight: "600" }}>
             Running
-          </Typography>
+          </MyTypography>
           <MyTypography variant="body1" color="primary">
             I run because it makes me feel alive. The fresh air, the endorphins,
             the feeling of my heart pumping and my lungs working--it's all
@@ -87,7 +86,7 @@ const Running = () => {
           md={6}
           sx={{ paddingLeft: "0", flexDirection: "column" }}
         >
-          <Typography variant="h5">Samcheok Marathon, South Korea</Typography>
+          <Typography variant="h5" align="center">Samcheok Marathon, South Korea</Typography>
           <Typography variant="subtitle1">
             Watch my finish, in 4 hours and 45 minutes{" "}
           </Typography>
@@ -102,7 +101,6 @@ const Running = () => {
           ></Iframe>
         </CenteredGrid>
       </Grid>
-    </Container>
   );
 };
 

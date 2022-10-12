@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import Home from "../Utils/Home";
 import Boxes from "../Utils/Boxes";
 import Carousel from "../Utils/Carousel/Carousel";
-import Experience from "./Experience";
 import { negExperience, negSkills } from "../../data";
 
 const Negotiation = ({ setItems }) => {

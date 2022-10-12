@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 const Img = styled("img")({
   margin: "auto",
   display: "block",
-  maxWidth: "100%",
+  maxWidth: "90%",
   maxHeight: "90%",
   marginTop: "20px",
 });

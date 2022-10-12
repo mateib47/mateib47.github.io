@@ -185,20 +185,26 @@ export const negExperience = [
   {
     id: 1,
     title: "NPT Graduate",
-    desc: "Built a broad understanding of the negotiation process by attending all the theoretical sessions, reading recommended books and participating in countless case simulations.",
+    desc: "Took part in a 8 month course at Negotiation Project Twente. Built a broad understanding of the negotiation process by attending all the theoretical sessions, reading recommended books and participating in countless case simulations.",
     img: "assets/npt_grad.jpeg",
   },
   {
     id: 2,
     title: "Wnr Finalist",
-    desc: "I took part in one of the largest negotiation competition for students. Despite of having a poor performance in the second round, my team and I managed to comeback and rank 1st in the last 2 rounds. Finally, we won The most Cooperative Team award and got the 4th place.",
+    desc: "I took part in one of the largest negotiation competition for students. My team won The most Cooperative Team award and got the 4th place.",
     img: "assets/wnr.png",
   },
   {
     id: 3,
-    title: "Wnr Finalist",
-    desc: "I took part in one of the largest negotiation competition for students. Despite of having a poor performance in the second round, my team and I managed to comeback and rank 1st in the last 2 rounds. Finally, we won The most Cooperative Team award and got the 4th place.",
-    img: "assets/wnr.png",
+    title: "Learning from failure",
+    desc: "The second round of WNR was a disaster, we felt we lost everything. In less than 24 hours we managed to comeback, ranking 1st in the last two rounds. I am grateful we did not win, I have learnt so much from this. Never give up!",
+    img: "assets/failure.png",
+  },
+  {
+    id: 4,
+    title: "Team worker",
+    desc: "Working with Nayim and Mart was one of the best experiences in my negotiation journey. We learnt how to complement each other's strengths and be effective as a team",
+    img: "assets/wnrTeam.JPG",
   },
 ];
 
