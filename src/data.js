@@ -1,6 +1,6 @@
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 import SchoolIcon from "@mui/icons-material/School";
-import HandshakeIcon from '@mui/icons-material/Handshake';
+import HandshakeIcon from "@mui/icons-material/Handshake";
 
 import javascript from "programming-languages-logos/src/javascript/javascript.svg";
 import java from "programming-languages-logos/src/java/java.png";
@@ -33,6 +33,17 @@ export async function fetchProjectsBySection(section, setData, setLoading) {
   } catch (error) {
     // console.error(error);
   }
+}
+
+export async function sendContactRequest(email, message) {
+  const requestOptions = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, message }),
+  };
+  fetch(process.env.REACT_APP_API + "/contact/add", requestOptions)
+    .then((response) => response.json())
+    .then((data) => console.log(data));
 }
 
 export const siteModes = [
@@ -262,7 +273,7 @@ export const person = {
     "self-discipline",
     "Pohang \n  University of Science and Technology",
     "graduating in July 2023",
-    "broadened my scope"
+    "broadened my scope",
   ],
 };
 
@@ -359,7 +370,8 @@ export const experience = [
   },
   {
     title: "University of Twente",
-    description: "Bsc Technical Computer Science & Honours in Business and Entrepreneurship",
+    description:
+      "Bsc Technical Computer Science & Honours in Business and Entrepreneurship",
     date: "2020 - 2023",
     color: "text.primary",
     iconComponent: <SchoolIcon />,
