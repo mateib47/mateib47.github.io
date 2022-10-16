@@ -33,19 +33,24 @@ const Languages = () => {
   const MyBox = styled(Box)(({ theme }) => ({
     width: "90%",
     margin: "auto",
-    height: "80%",
     [theme.breakpoints.up("md")]: {
       width: "70%",
+      height: "80%",
     },
   }));
 
   return (
     <div className="languages" id="languages">
-      <Typography variant="h3" color="primary" align="center" sx={{m:2, overflow:"hidden", fontWeight:500}}>
+      <Typography
+        variant="h3"
+        color="primary"
+        align="center"
+        sx={{ m: 2, overflow: "hidden", fontWeight: 500 }}
+      >
         Programming languages, frameworks and libraries
       </Typography>
       <MyBox display="flex" justifyContent="center" alignItems="center">
-        <Masonry columns={{ xs: 2, md: 4, lg: 5 }} spacing={2} sx={{my:2}}>
+        <Masonry columns={{ xs: 2, md: 4, lg: 5 }} spacing={2} sx={{ my: 2 }}>
           {heights.map((x, index) => (
             <Tooltip title={x.descr}>
               <Item key={index} sx={{ height: x.h, overflow: "hidden" }}>

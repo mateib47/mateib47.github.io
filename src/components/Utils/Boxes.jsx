@@ -41,7 +41,7 @@ const Boxes = ({ id, items }) => {
           spacing={4}
           alignItems="stretch"
           justifyContent="space-evenly"
-          sx={{ maxWidth: "80%", margin: "auto" }}
+          sx={{ maxWidth: "80%", margin: "auto", pb:3 }}
         >
           {items.map((x) => (
             <Zoom

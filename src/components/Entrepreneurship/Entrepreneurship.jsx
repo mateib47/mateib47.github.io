@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Home from "../Utils/Home";
 import InfoDisplay from "../Utils/InfoDisplay";
 import Boxes from "../Utils/Boxes";
+import HorizontalBars from "../Utils/HorizontalBars";
 
 const b = {
   name: "Babythings",
@@ -48,7 +49,7 @@ const Entrepreneurship = ({ setItems }) => {
         header="Student entrepreneur"
         text={`I have always been driven to start my own businesses. I believe that being a entrepreneur allows me to have a greater impact on the world. I am able to use my knowledge and skills to create products and services that make a difference in people's lives.`}
       />
-      <Boxes items={items} />
+      <HorizontalBars title="Past businesses" data={items} />
       <InfoDisplay
         lifetime={b.lifetime}
         name={b.name}

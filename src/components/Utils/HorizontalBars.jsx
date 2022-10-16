@@ -49,9 +49,9 @@ const HorizontalBars = ({ id,title, data }) => {
               />
               <Box sx={{ flex: 10 }}>
                 <Typography variant="h4" sx={{ overflow: "hidden" }}>
-                  {x.title}
+                  {x.header}
                 </Typography>
-                <Typography variant="body1">{x.description}</Typography>
+                <Typography variant="body1">{x.body}</Typography>
               </Box>
             </MyPaper>
         ))}
