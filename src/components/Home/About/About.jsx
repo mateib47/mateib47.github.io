@@ -35,7 +35,6 @@ const About = () => {
       }
       descr.push(d);
     }
-    console.log(descr);
     return descr;
   };
 

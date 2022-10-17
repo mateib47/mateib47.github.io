@@ -41,6 +41,7 @@ export async function sendContactRequest(email, message) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, message }),
   };
+  console.log(requestOptions);
   fetch(process.env.REACT_APP_API + "/contact/add", requestOptions)
     .then((response) => response.json())
     .then((data) => console.log(data));
@@ -150,19 +151,19 @@ export const testimonialsList = [
 
 export const certifications = [
   {
-    title: "Responsive Web Design",
-    description: `Learnt the languages that developers use to build webpages: HTML (Hypertext Markup Language) for content, and CSS (Cascading Style Sheets) for design. Learnt how to make webpages that respond to different screen sizes.`,
+    header: "Responsive Web Design",
+    body: `Learnt the languages that developers use to build webpages: HTML (Hypertext Markup Language) for content, and CSS (Cascading Style Sheets) for design. Learnt how to make webpages that respond to different screen sizes.`,
     img: "fcc.png",
   },
   {
-    title: "JavaScript Algorithms and Data Structures",
-    description: `Learnt the fundamentals of JavaScript including variables, arrays, objects, loops, and functions. Applied that knowledge by creating algorithms to manipulate strings and factorialize numbers. Revised two important programming styles or paradigms: Object Oriented Programming (OOP) and Functional Programming (FP)
+    header: "JavaScript Algorithms and Data Structures",
+    body: `Learnt the fundamentals of JavaScript including variables, arrays, objects, loops, and functions. Applied that knowledge by creating algorithms to manipulate strings and factorialize numbers. Revised two important programming styles or paradigms: Object Oriented Programming (OOP) and Functional Programming (FP)
 `,
     img: "fcc.png",
   },
   {
-    title: "Front End Development Libraries",
-    description: `Learnt how to style quickly with Bootstrap. Learn how add logic to CSS styles and extend them with Sass. Learnt jQuery, React and Redux. Implemented five web applications using React.
+    header: "Front End Development Libraries",
+    body: `Learnt how to style quickly with Bootstrap. Learn how add logic to CSS styles and extend them with Sass. Learnt jQuery, React and Redux. Implemented five web applications using React.
 `,
     img: "fcc.png",
   },
