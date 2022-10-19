@@ -10,7 +10,7 @@ import Popper from "@mui/material/Popper";
 import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
 import { Link } from "react-router-dom";
-import { siteModes } from "../../../data";
+import { siteModes, siteModesRaw } from "../../../data";
 import Typography from "@mui/material/Typography";
 
 const Selector = ({theme}) => {
@@ -20,7 +20,6 @@ const Selector = ({theme}) => {
   
 
   const handleMenuItemClick = (event, index) => {
-    console.log(siteModes[index]);
     setOpen(false);
   };
 
@@ -75,8 +74,9 @@ const Selector = ({theme}) => {
                 <MenuList id="split-button-menu" autoFocusItem>
                   {siteModes.map((option, index) => (
                     <Link
-                      to={"/" + option.toLowerCase()}
+                      to={"/" + siteModesRaw[index]}
                       style={{ textDecoration: "none", color: "inherit" }}
+                      key={option+"-link"}
                     >
                       <MenuItem
                         key={option}

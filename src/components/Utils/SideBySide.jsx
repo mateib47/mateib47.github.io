@@ -8,10 +8,9 @@ import { Iframe } from "../Utils/Utils";
 import { CenteredGrid } from "../Utils/Utils";
 
 const Img = styled("img")({
-  margin: "auto",
   display: "block",
-  maxWidth: "90%",
-  maxHeight: "90%",
+  maxWidth: "60%",
+  maxHeight: "60%",
   marginTop: "20px",
 });
 
@@ -23,9 +22,9 @@ const MyTypography = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const SideBySide = ({props: { header, descr, sideHeader, sideDescr, iframe, img }}) => {
+const SideBySide = ({props: { header, descr, sideHeader, sideDescr, iframe, img }, id}) => {
   return (
-    <Grid container sx={{ width: "100%", height: "100%", px: 2 }}>
+    <Grid container sx={{ width: "100%", height: "100%", px: 2 }} id={id}>
       <CenteredGrid
         xs={12}
         md={6}

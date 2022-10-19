@@ -220,6 +220,60 @@ export const negExperience = [
   },
 ];
 
+//ENTREPRENEURSHIP
+export const babythings = {
+  name: "Babythings",
+  lifetime: "Sep 2021 - Jul 2022",
+  img: "business_team.png",
+  header:
+    "As a CTO and co-founder, I had to assist the team in business development and market research while developing the website of the store",
+  tasks: [
+    "Conducted field interviews with potential customers",
+    "Created multiple MVP websites",
+    "Designed, developed, deployed, and maintained all software ",
+    "Developed the e-commerce platform using React.js and Commerce.js",
+    "Worked in a team of five people of different nationalities and backgrounds",
+    "Developed the business plan and pitched the business idea as the final graduation assignment of the Honours Business & Entrepreneurship program",
+  ],
+};
+export const businesses = [
+  {
+    header: "BabyThings",
+    img: "business.PNG",
+    body: "Through a monthly subscription service KiekeBox provides high quality, European-based, gender neutral baby products sourced from small-scale, conscious brands to conscious parents of 0-24 month old babies.",
+  },
+  {
+    header: "Twente Hackathon",
+    img: "hackathon.PNG",
+    body: "Our goal was to engage ingenious students from University of Twente and Saxion and present them with real life software problems of low or medium complexity selected by our partner companies so they can deliver a creative solution. ",
+  },
+  {
+    header: "Fat Rhino studios",
+    img: "rhino.gif",
+    body: "My first business was creating quiz apps, posting them on Play store and displaying ads. I created a quiz apps that allowed people to test their knowledge on a variety of topics.",
+  },
+];
+
+//SPORTS
+export const sports = [
+  {
+    header: "Running",
+    descr:
+      "I run because it makes me feel alive. The fresh air, the endorphins, the feeling of my heart pumping and my lungs working--it's all invigorating and empowering. I also run because it requires mental toughness. Every time I lace up my shoes and head out the door, I know I'm going to have to push myself physically and mentally. I might get tired, I might want to give up, but I never do. Why? Because I know that running makes me stronger, both physically and mentally. It makes me better able to handle whatever life throws my way.",
+    sideHeader: "Samcheok Marathon, South Korea",
+    sideDescr: "Watch my finish, in 4 hours and 45 minutes",
+    iframe: "https://www.youtube.com/embed/d6ywzwNWXmE?start=15083",
+  },
+  {
+    header: "Working out",
+    descr:
+      "There are a few reasons why I workout everyday. First, it Discipline. I have to be disciplined to show up everyday and put in the work even when I do not feel like doing it. Second, it keeps me mentally tough. I have to be mentally tough to push myself everyday and stay consistent.",
+    sideHeader: "Ulympics sports competition, Enschede",
+    sideDescr: "3rd place at pull-ups, dips and 2nd at arm wrestling",
+    img: "assets/pullups.JPG",
+  },
+];
+
 export const person = {
   name: "Matei Bucur",
   status: "Student",
