@@ -60,8 +60,7 @@ const App = () => {
             maxWidth={false}
           >
             <Routes>
-              <Route path="/" element={<Navigate to="/home" />} />
-              <Route path="/home" element={<Home setItems={setItems} />} />
+              <Route path="/" element={<Home setItems={setItems} />} />
               <Route
                 path="/programming"
                 element={<Programming setItems={setItems} />}

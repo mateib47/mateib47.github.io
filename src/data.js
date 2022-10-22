@@ -56,7 +56,7 @@ export const siteModes = [
   "Sports",
 ];
 export const siteModesRaw = [
-  "home",
+  "",
   "programming",
   "negotiation",
   "entrepreneurship",
