@@ -97,7 +97,7 @@ const ExperienceItem = ({ color, title, description, date, iconComponent }) => {
           <Typography variant="h6" component="span">
             {title}
           </Typography>
-          <Typography>{description}</Typography>
+          <Typography sx={{margin:0}}>{description}</Typography>
         </TimelineContent>
       </TimelineItem>
     </>

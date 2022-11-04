@@ -12,12 +12,13 @@ import MenuList from "@mui/material/MenuList";
 import { Link } from "react-router-dom";
 import { siteModes, siteModesRaw } from "../../../data";
 import Typography from "@mui/material/Typography";
+import { useEffect } from "react";
 
 const Selector = ({theme}) => {
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
 
-  
+
 
   const handleMenuItemClick = (event, index) => {
     setOpen(false);

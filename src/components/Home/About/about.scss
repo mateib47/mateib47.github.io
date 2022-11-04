@@ -32,6 +32,9 @@
             img{
                 height: 100%;
             }
+            @include mobile {
+                margin-bottom: 20px;
+            }
         }
     }
 

@@ -12,7 +12,7 @@ const Sidebar = () => {
       <Button href={person.linkedIn} target="_blank">
         <LinkedIn className="icon" />
       </Button>
-      <Button href={person.github} target="_blank"> 
+      <Button href={person.githubLink} target="_blank"> 
         <GitHub className="icon" />
       </Button>
     </div>
