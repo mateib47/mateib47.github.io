@@ -123,4 +123,21 @@ export const themes = [
       },
     },
   }),
+  createTheme({
+    ...globalTheme,
+    palette: {
+      primary: {
+        main: "#AD8756",
+      },
+      secondary: {
+        main: "#BB9769",
+      },
+      background: {
+        default: "#221714",
+      },
+      text: {
+        default: "#BB9769",
+      },
+    },
+  }),
 ];

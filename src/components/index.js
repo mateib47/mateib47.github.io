@@ -12,6 +12,8 @@ export {default as PublicSpeak} from './PublicSpeak/PublicSpeak';
 export {default as Negotiation} from './Negotiation/Negotiation';
 export {default as Sports} from './Sports/Sports';
 export {default as Entrepreneurship} from './Entrepreneurship/Entrepreneurship';
+export {default as Barbershop} from './Barbershop/Barbershop';
+
 
 
 

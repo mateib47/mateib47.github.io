@@ -6,6 +6,8 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
 
+//todo fix component bug on 375 px screen width
+
 const MyPaper = styled(Paper)(({ theme }) => ({
   maxWidth: "88%",
   margin: "auto",
@@ -19,7 +21,7 @@ const MyPaper = styled(Paper)(({ theme }) => ({
   },
 }));
 
-const Story = () => {
+const Story = ({ header, description }) => {
   return (
     <Box
       sx={{
@@ -45,17 +47,12 @@ const Story = () => {
               color="primary.main"
               sx={{ overflow: "hidden" }}
             >
-              My story
+              {header}
             </Typography>
           </Grid>
           <Grid item>
             <Typography variant="body1" color="initial">
-              I was always scared of public speaking, but I decided that I
-              wanted to become a TED speaker because I wanted to share my story
-              with the world. I knew that if I could overcome my fear of public
-              speaking, I could inspire others to do the same. I went through all the steps of selection received professional coaching.
-              I practiced like crazy, I was rehearsing my speech during lunch breaks, while running and even swimming. Eventually, I built up the confidence to
-              speak in front of large audiences.
+              {description}
             </Typography>
           </Grid>
         </Grid>

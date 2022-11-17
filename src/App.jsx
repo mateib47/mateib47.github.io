@@ -8,6 +8,7 @@ import {
   Negotiation,
   Sports,
   Entrepreneurship,
+  Barbershop,
 } from "./components";
 import "./app.scss";
 import { useState, useEffect } from "react";
@@ -79,6 +80,10 @@ const App = () => {
               <Route
                 path="/entrepreneurship"
                 element={<Entrepreneurship setItems={setItems} />}
+              />
+              <Route
+                path="/barbershop"
+                element={<Barbershop setItems={setItems} />}
               />
             </Routes>
           </Container>

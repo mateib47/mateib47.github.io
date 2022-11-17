@@ -54,6 +54,7 @@ export const siteModes = [
   "Entrepreneurship",
   "Public speaking",
   "Sports",
+  "Barbershop",
 ];
 export const siteModesRaw = [
   "",
@@ -62,6 +63,7 @@ export const siteModesRaw = [
   "entrepreneurship",
   "public%20speaking",
   "sports",
+  "barbershop",
 ];
 
 export const projectsList = [
