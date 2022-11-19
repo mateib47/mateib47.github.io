@@ -11,7 +11,7 @@ import {
   Barbershop,
 } from "./components";
 import "./app.scss";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -29,6 +29,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@mui/material/Container";
 import { themes } from "./themes";
 import { siteModesRaw } from "./data";
+import ScrollToTop from "./components/Utils/ScrollToTop";
 
 const App = () => {
   const { pathname, hash, key } = useLocation();
@@ -45,8 +46,6 @@ const App = () => {
     "Contact",
   ]);
   const [theme, setTheme] = useState(0);
-
-  
 
   //update sections of topbar menu
   return (
