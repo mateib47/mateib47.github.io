@@ -65,6 +65,7 @@ const About = () => {
             </Typography>
             {description.map((x) => (
               <Typography
+                key={description.indexOf(x)}
                 variant="body2"
                 color="primary"
                 paragraph={true}

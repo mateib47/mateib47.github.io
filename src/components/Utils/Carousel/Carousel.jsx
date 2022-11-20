@@ -68,7 +68,7 @@ const Carousel = ({id, list }) => {
         style={{ transform: `translateX(-${current * 100}vw)` }}
       >
         {list.map((d) => (
-          <Slide icon={d.icon} title={d.title} desc={d.desc} img={d.img} />
+          <Slide key={d.title} icon={d.icon} title={d.title} desc={d.desc} img={d.img} />
         ))}
       </Slider>
       <RArrow src="assets/arrow.png" alt="" onClick={() => handleClick()} />

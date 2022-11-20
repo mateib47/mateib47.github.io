@@ -14,11 +14,9 @@ import { siteModes, siteModesRaw } from "../../../data";
 import Typography from "@mui/material/Typography";
 import { useEffect } from "react";
 
-const Selector = ({theme}) => {
+const Selector = ({ theme }) => {
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
-
-
 
   const handleMenuItemClick = (event, index) => {
     setOpen(false);
@@ -43,7 +41,7 @@ const Selector = ({theme}) => {
         ref={anchorRef}
         aria-label="split button"
       >
-        <Button >{siteModes[theme] }</Button>
+        <Button>{siteModes[theme]}</Button>
         <Button
           size="small"
           aria-controls={open ? "split-button-menu" : undefined}
@@ -77,7 +75,7 @@ const Selector = ({theme}) => {
                     <Link
                       to={"/" + siteModesRaw[index]}
                       style={{ textDecoration: "none", color: "inherit" }}
-                      key={option+"-link"}
+                      key={option + "-link"}
                     >
                       <MenuItem
                         key={option}

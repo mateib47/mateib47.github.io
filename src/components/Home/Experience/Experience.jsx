@@ -16,24 +16,20 @@ import Paper from "@mui/material/Paper";
 import { experience } from "../../../data";
 import { styled } from "@mui/material/styles";
 
-
 const MyTimeline = styled(Timeline)(({ theme }) => ({
   transform: "rotate(90deg)",
-  maxHeight:"100%"
-
+  maxHeight: "100%",
 }));
 
 const MyTimelineContent = styled(TimelineContent)(({ theme }) => ({
   textAlign: "left",
-
 }));
 
 const MyTypography = styled(Typography)(({ theme }) => ({
   display: "inline-block",
   transform: "rotate(-90deg)",
   textAlign: "center",
-  minWidth: 50
-
+  minWidth: 50,
 }));
 
 const MyTimelineDot = styled(TimelineDot)(({ theme }) => ({
@@ -43,9 +39,9 @@ const MyTimelineDot = styled(TimelineDot)(({ theme }) => ({
 }));
 
 const RespTimeline = styled(Timeline)(({ theme }) => ({
-  padding:0,
+  padding: 0,
   [theme.breakpoints.up("md")]: {
-    padding:"16px"
+    padding: "16px",
   },
 }));
 
@@ -63,6 +59,7 @@ const Experience = () => {
       >
         {experience.map((x) => (
           <ExperienceItem
+            key={x.title}
             color={x.color}
             title={x.title}
             description={x.description}
@@ -86,7 +83,6 @@ const ExperienceItem = ({ color, title, description, date, iconComponent }) => {
           color={color}
         >
           <Typography variant="body1">{date}</Typography>
-          
         </TimelineOppositeContent>
         <TimelineSeparator sx={{ flex: "inherit" }}>
           <TimelineConnector />
@@ -97,7 +93,7 @@ const ExperienceItem = ({ color, title, description, date, iconComponent }) => {
           <Typography variant="h6" component="span">
             {title}
           </Typography>
-          <Typography sx={{margin:0}}>{description}</Typography>
+          <Typography sx={{ margin: 0 }}>{description}</Typography>
         </TimelineContent>
       </TimelineItem>
     </>
